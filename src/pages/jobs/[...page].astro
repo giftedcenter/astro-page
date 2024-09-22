@@ -8,11 +8,82 @@ export async function getStaticPaths({ paginate }) {
 
   return paginate(data, { pageSize: 6 })
 }
+import { Icon } from 'astro-icon/components'
+const { src = '/astronaut-hero-img.webp' } = Astro.props
 
 const { page } = Astro.props
 ---
+
 <DefaultLayout title="Career"
 description="An example of a blog with dynamic content fetched from JSONPlaceholder using the title, body and userId."
 >
-  <Hero />
+<section class="hero my-24">
+  <div class="container">
+    <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
+      <div class="flex flex-col items-center gap-8 md:items-start">
+        <h3 class="text-center text-6xl md:text-left lg:text-8xl">
+          <slot>Start your career with <span class="text-gradient">Gifted Center</span>  of Tutoring </slot>
+        </h3>
+        <div class="flex flex-col gap-3 min-[500px]:flex-row">
+          <a class="button has-icon" href=mailto:jobs@giftedcenter.org>
+            <Icon name="ion:star-outline" />
+             Submit your resume: jobs@giftedcenter.org
+          </a>
+         
+        </div>
+                  <!-- Available Positions -->
+                  <h2 class="text-4xl font-bold mt-8">Positions Available:</h2>
+                  <ul class="list-disc pl-5">
+                    <!-- Primary School Programs -->
+                    <li>
+                      <strong>Primary School Programs:</strong>
+                      <ul class="list-inside list-disc">
+                        <li>Math Lead</li>
+                        <li>Early Reading and Writing Lead</li>
+                        <li>STEM Lead</li>
+                      </ul>
+                    </li>
+        
+                    <!-- Secondary School Programs -->
+                    <li>
+                      <strong>Secondary School Programs Manager</strong>
+                    </li>
+        
+                    <!-- Tutors -->
+                    <li>
+                      <strong>Tutors:</strong>
+                      <ul class="list-inside list-disc">
+                        <li>Chemistry</li>
+                        <li>Biology</li>
+                        <li>Medical Subjects</li>
+                        <li>Engineering</li>
+                        <li>Humanities</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+      </div>
+      <img class="hidden lg:block" src={src} alt="" decoding="async" />
+    </div>
+  </div>
+</section>
+
+
+
   </DefaultLayout>
+
+  <style lang="scss">
+    .text-gradient {
+      background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-500));
+      background-clip: border-box;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  
+    :global(.darkmode .text-gradient) {
+      background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-400));
+      background-clip: border-box;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
