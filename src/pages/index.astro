@@ -1,0 +1,77 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero.astro'
+import Feature from '../components/Feature.astro'
+import Counter from '../components/Counter.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+const monthsPassed = new Date().getFullYear() * 12 + new Date().getMonth() - (2024 * 12 + 8);
+
+---
+
+<DefaultLayout title="Home">
+  <Hero />
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Our Philosophy</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="mdi:tailwind" title="Tailwind CSS">
+          Use the power of Tailwind to greatly improve your productivity and enhance your developer workflow.
+        </Feature>
+        <Feature icon="mdi:wheelchair-accessibility" title="a11y Components">
+          17 components and counting, all tried and tested for the most optimal accessible experience for your visitors.
+        </Feature>
+        <Feature icon="mdi:looks" title="Prettier">
+          Less worry about formatting your code, let the Astro Prettier integration do the heavy lifting.
+        </Feature>
+        <Feature icon="mdi:eslint" title="Math">
+          Lint your code with strict a11y settings to ensure you stay on track with the WCAG standards.
+        </Feature>
+        <Feature icon="mdi:book-open-page-variant" title="Language Arts">
+          This theme comes with a fully integrated blog, dynamic pages and SEO optimization.
+        </Feature>
+        <Feature icon="mdi:language-markdown" title="Science">
+          Easily use .md and .mdx pages to build your websites or use it with Netlify CMS.
+        </Feature>
+        <Feature icon="mdi:theme-light-dark" title="Computer Science">
+          Fully integrated Dark mode gives your users the choice for their favorite viewing mode.
+        </Feature>
+        <Feature icon="mdi:cog" title="Engineering">
+          The theme offers some very handy utilities to help you build your website faster.
+        </Feature>
+        <Feature icon="mdi:lighthouse" title="Everything Else">
+          Excellent lighthouse scores means your website will load faster and get better SEO rankings.
+        </Feature>
+      </div>
+    </div>
+  </section>
+  <ContentMedia imgSrc="/accessible-components.webp">
+    <h2>Trusted Reputation</h2>
+    <p class="text-2xl">
+      This theme provides plenty of tried and tested Accessible Astro Components. Some are native to this theme and a
+      lot of others are integrated using a <a href="https://github.com/markteekman/accessible-astro-components"
+        >separate package</a
+      >. They'll get you up and running in building an accessible solution for your visitors.
+    </p>
+  </ContentMedia>
+  <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
+    <h2>Vetted Prestigious Tutors</h2>
+    <p class="text-2xl">
+      Using semantic HTML, landmarks, skip links, screen reader friendly content, aria-labels, keyboard accessible
+      navigation and components, clear outlines and tab indicators and the right color contrast, you're more certain of
+      reaching WCAG AA compliance.
+    </p>
+  </ContentMedia>
+  <section class="mb-32 mt-64">
+    <div class="container">
+      
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
+        <Counter count="2" title="Tutors" sub="" />
+        <Counter count="50+" title="Courses" sub="covered" />
+        <Counter count="100" title="Satisfication" sub="Rate" />
+        <Counter count={monthsPassed} title="Months" sub="Since launch" />
+      </div>
+    </div>
+  </section>
+  <h1 id="Contact"> </h1>
+</DefaultLayout>
+

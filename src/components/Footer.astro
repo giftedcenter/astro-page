@@ -1,0 +1,16 @@
+---
+import CallToAction from './CallToAction.astro'
+
+const currentYear = new Date().getFullYear()
+---
+
+<footer>
+  <CallToAction />
+  <section class="py-8">
+    <div class="container">
+      <p>
+        &copy; {currentYear} -  <a href="https://giftedcenter.org/">Gifted Center</a>.
+      </p>
+    </div>
+  </section>
+</footer>
