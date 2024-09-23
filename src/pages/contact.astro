@@ -6,10 +6,11 @@ import Counter from '../components/Counter.astro'
 import ContentMedia from '../components/ContentMedia.astro'
 import { Icon } from 'astro-icon/components'
 
+
 const currentYear = new Date().getFullYear()
 const { src = '/astronaut-hero-img.webp' } = Astro.props
 const monthsPassed = new Date().getFullYear() * 12 + new Date().getMonth() - (2024 * 12 + 8);
-
+const formURL = import.meta.env.FORMS_URL;
 ---
 <NoFooter title="Tutoring">
   
@@ -30,12 +31,14 @@ const monthsPassed = new Date().getFullYear() * 12 + new Date().getMonth() - (20
 
 
   <ContentMedia imgSrc="/accessible-components.webp">
-  
+    <iframe name="responseIframe" style="display:none;"></iframe> 
+<!-- target="responseIframe" id="contactForm" -->
+   
     <h1>Contact Us</h1>
-    <form action="https://script.google.com/macros/s/AKfycbwIHTKUt17NRs9h-8s2SEny5ZGUa3AtucXxTjn2LvgSIbn2Il_S0SXVQOfu2bCZV85yCA/exec" method="POST">
+    <form action={formURL} method="POST">
      
       <label>
-        <p class="text-2xl">Name: </p>
+        <p class="text-2xl">{formURL}: </p>
         <div id="form"><input type="text" name="name" required /></div>
       </label>
     
@@ -74,6 +77,7 @@ const monthsPassed = new Date().getFullYear() * 12 + new Date().getMonth() - (20
       <button class="submit-button" type="submit">Submit</button>
     </form>
     
+    <p id="thankYouMessage" style="display:none; color:green;">Thanks for contacting us! We will be in touch with you shortly.</p>
   
 </ContentMedia>
 
@@ -85,6 +89,25 @@ const monthsPassed = new Date().getFullYear() * 12 + new Date().getMonth() - (20
     </p>
   </div>
 </section>
+
+
+<script>
+
+  document.getElementById('contactForm').onsubmit = function(event) {
+    // Show the thank-you message
+    document.getElementById('thankYouMessage').style.display = 'block';
+    
+    // Disable the form elements after a short delay
+    var formElements = this.elements;
+    setTimeout(function() {
+      for (var i = 0; i < formElements.length; i++) {
+        formElements[i].disabled = true; // Disable textboxes and the submit button
+      }
+    }, 100); // Adjust the delay as needed (100 milliseconds in this example)
+    
+    // Allow the form to submit
+  };
+  </script>
 
 <style lang="scss">
   .text-gradient {
@@ -155,4 +178,6 @@ textarea:focus {
   color: white;
 }
 </style>
+
+
 
