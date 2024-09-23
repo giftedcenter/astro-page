@@ -1,0 +1,158 @@
+---
+import NoFooter from '../layouts/NoFooterLayout.astro'
+import Hero from '../components/Hero.astro'
+import Feature from '../components/Feature.astro'
+import Counter from '../components/Counter.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+import { Icon } from 'astro-icon/components'
+
+const currentYear = new Date().getFullYear()
+const { src = '/astronaut-hero-img.webp' } = Astro.props
+const monthsPassed = new Date().getFullYear() * 12 + new Date().getMonth() - (2024 * 12 + 8);
+
+---
+<NoFooter title="Tutoring">
+  
+  <section class="hero my-24">
+    <div class="container">
+      <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
+        <div class="flex flex-col items-center gap-8 md:items-start">
+          <h1 class="text-center text-6xl md:text-left lg:text-8xl">
+           <slot><span class="text-gradient">  <a href=/contacttest>Gifted Center</a></span>  of Tutoring </slot>
+          </h1>
+
+        </div>
+        <img class="hidden lg:block" src={src} alt="" decoding="async" />
+      </div>
+    </div>
+  </section>
+  </section>
+
+
+  <ContentMedia imgSrc="/accessible-components.webp">
+  
+    <h1>Contact Us</h1>
+    <form action="https://script.google.com/macros/s/AKfycbwIHTKUt17NRs9h-8s2SEny5ZGUa3AtucXxTjn2LvgSIbn2Il_S0SXVQOfu2bCZV85yCA/exec" method="POST">
+     
+      <label>
+        <p class="text-2xl">Name: </p>
+        <div id="form"><input type="text" name="name" required /></div>
+      </label>
+    
+     
+      <label>
+        <p class="text-2xl">Email: </p>
+        <div id="form"><input type="email" name="email" required /></div>
+      </label>
+    
+      
+      <label>
+        <p class="text-2xl">Telephone: </p>
+        <div id="form"><input type="tel" name="telephone" required /></div>
+      </label>
+    
+      
+      <label>
+        <p class="text-2xl">Grade: </p>
+        <div id="form"><input type="text" name="grade" /></div>
+      </label>
+    
+    
+      <label>
+        <p class="text-2xl">Subject: </p>
+        <div id="form"><input type="text" name="subject" /></div>
+      </label>
+    
+      
+      <label>
+        <p class="text-2xl">Additional Info: </p>
+        <div id="form">
+          <textarea name="info" rows="4" cols="50"></textarea>
+        </div>
+      
+      </label>
+      <button class="submit-button" type="submit">Submit</button>
+    </form>
+    
+  
+</ContentMedia>
+
+</NoFooter>
+<section class="py-8">
+  <div class="container">
+    <p>
+      &copy; {currentYear} -  <a href="https://giftedcenter.org/"> Gifted Center</a>. <a href="https://github.com/giftedcenter/astro-page">Github </a>
+    </p>
+  </div>
+</section>
+
+<style lang="scss">
+  .text-gradient {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-500));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  :global(.darkmode .text-gradient) {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-400));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  input {
+    background-color: #f9f9f9;
+    color: hsl(210 10% 14%);
+    box-sizing: border-box;
+    border: 2px solid hsl(210 10% 14%); /* Initial black border */
+    padding: 8px;
+    outline: none; /* Remove default focus outline */
+}
+
+input:focus {
+    border: 1px solid transparent; /* Make the border transparent to show gradient */
+    background-image: linear-gradient(#ffffff, #ffffff), /* Keep the background color */
+                      linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-500));
+    background-origin: border-box;
+    background-clip: padding-box, border-box; /* Clip the gradient to the border area */
+    outline: none; /* Remove default focus outline */
+}
+
+textarea {
+  background-color: #f9f9f9;
+  color: hsl(210 10% 14%);
+  box-sizing: border-box;
+  border: 3px solid #000000;
+  padding: 8px;
+  outline: none;
+  transition: border 0.3s ease-in-out;
+  width: 100%; /* Makes it take full width of the container */
+  resize: vertical; /* Allows users to resize vertically only */
+}
+
+textarea:focus {
+  border: 3px solid transparent;
+  background-image: linear-gradient(#ffffff, #ffffff), /* Keep the background color */
+                    linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-500));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+
+.submit-button {
+  transition-duration: 0.4s;
+}
+
+.submit-button:hover {
+  background-color: var(--primary-400); /* Changes background color on hover */
+  color: white;
+}
+
+
+:global(.darkmode .submit-button:hover) {
+  background-color: var(--secondary-300); /* Lighter color on hover in dark mode */
+  color: white;
+}
+</style>
+
