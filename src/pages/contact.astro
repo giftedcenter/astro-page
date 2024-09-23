@@ -13,65 +13,48 @@ const monthsPassed = new Date().getFullYear() * 12 + new Date().getMonth() - (20
 const formURL = import.meta.env.FORMS_URL;
 ---
 <NoFooter title="Tutoring">
-  
-  <section class="hero my-24">
-    <div class="container">
-      <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
-        <div class="flex flex-col items-center gap-8 md:items-start">
-          <h1 class="text-center text-6xl md:text-left lg:text-8xl">
-           <slot><span class="text-gradient">  <a href=/contacttest>Gifted Center</a></span>  of Tutoring </slot>
-          </h1>
-
-        </div>
-        <img class="hidden lg:block" src={src} alt="" decoding="async" />
-      </div>
-    </div>
-  </section>
-  </section>
-
 
   <ContentMedia imgSrc="/accessible-components.webp">
+    <h1 id="form">Contact Us</h1>
     <iframe name="responseIframe" style="display:none;"></iframe> 
 <!-- target="responseIframe" id="contactForm" -->
-   
-    <h1>Contact Us</h1>
-    <form action={formURL} method="POST">
+    <form action={formURL} method="POST" target="responseIframe" id="contactForm">
      
       <label>
         <p class="text-2xl">Name: </p>
-        <div id="form"><input type="text" name="name" required /></div>
+        <input type="text" name="name" required />
       </label>
     
      
       <label>
         <p class="text-2xl">Email: </p>
-        <div id="form"><input type="email" name="email" required /></div>
+        <input type="email" name="email" required />
       </label>
     
       
       <label>
         <p class="text-2xl">Telephone: </p>
-        <div id="form"><input type="tel" name="telephone" required /></div>
+        <input type="tel" name="telephone" required />
       </label>
     
       
       <label>
         <p class="text-2xl">Grade: </p>
-        <div id="form"><input type="text" name="grade" /></div>
+        <input type="text" name="grade" />
       </label>
     
     
       <label>
         <p class="text-2xl">Subject: </p>
-        <div id="form"><input type="text" name="subject" /></div>
+        <input type="text" name="subject" />
       </label>
     
       
       <label>
         <p class="text-2xl">Additional Info: </p>
-        <div id="form">
+        
           <textarea name="info" rows="4" cols="50"></textarea>
-        </div>
+        
       
       </label>
       <button class="submit-button" type="submit">Submit</button>
@@ -80,6 +63,28 @@ const formURL = import.meta.env.FORMS_URL;
     <p id="thankYouMessage" style="display:none; color:green;">Thanks for contacting us! We will be in touch with you shortly.</p>
   
 </ContentMedia>
+
+<ContentMedia imgSrc="/accessible-components.webp" reverseImg={true}>
+  <div class="call-to-action mt-24 mb-32 flex flex-col items-center gap-12 rounded-xl p-12 md:p-24">
+    <p class="text-2xl">You can also contact us directly via <br>
+      telephone: <a href="tel:647-987-2869"> 647-987-2869</a> or <br>
+       email: <a href="mailto:tutoring@giftedcenter.org">tutoring@giftedcenter.org</a> or simply sumbit a <a href=#form>form </a> below and we will get back to you as soon as possible.</p>
+  </div>
+  </ContentMedia>
+
+<section class="hero my-24">
+  <div class="container">
+    <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
+      <div class="flex flex-col items-center gap-8 md:items-start">
+        <h1 class="text-center text-6xl md:text-left lg:text-8xl">
+         <slot><span class="text-gradient">  <a href=/contacttest>Gifted Center</a></span>  of Tutoring </slot>
+        </h1>
+
+      </div>
+      <img class="hidden lg:block" src={src} alt="" decoding="async" />
+    </div>
+  </div>
+</section>
 
 </NoFooter>
 <section class="py-8">
