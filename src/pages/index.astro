@@ -16,77 +16,47 @@ const monthsPassed = new Date().getFullYear() * 12 + new Date().getMonth() - (20
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
         <Feature icon="mdi:tailwind"  title="">
           <a href=/primary-school style="text-decoration:none"><h3>Primary School</h3></a>
-          We teach kids math and math.
-        </Feature>
+          Unlock your child’s early potential with tailored lessons designed to challenge and engage young gifted minds. Our primary tutors focus on building strong foundations while fostering creativity and intellectual curiosity.        </Feature>
  
         <Feature icon="mdi:looks" title="">
           <a href=/college style="text-decoration:none"><h3>Secondary School</h3></a>
-          Less worry about formatting your code, let the Astro Prettier integration do the heavy lifting.
+          Unlock your child’s full potential with advanced instruction tailored to both junior and senior secondary students. For junior learners, we focus on critical thinking, academic growth, and preparation for the challenges ahead. Senior students receive expert pre-university guidance, including exam preparation, competitive applications, and readiness for higher education.
         </Feature>
-        <Feature icon="mdi:eslint" title="">
-          <a href=/college style="text-decoration:none"><h3>College</h3></a>
-          Lint your code with strict a11y settings to ensure you stay on track with the WCAG standards.
-        </Feature>
+
         <Feature icon="mdi:book-open-page-variant" title="">
           <a href=/university style="text-decoration:none"><h3>University</h3></a>
-          This theme comes with a fully integrated blog, dynamic pages and SEO optimization.
+          Our university tutoring is heavily specialized, offering 1-on-1 instruction tailored to specific courses and fields of study. Work directly with experts who provide in-depth guidance, ensuring you excel in your academic journey and achieve your goals.
+
+
         </Feature>
-        <Feature icon="mdi:language-markdown" title="">
-          <a href=/primary-school style="text-decoration:none"><h3>Math</h3></a>
-          Easily use .md and .mdx pages to build your websites or use it with Netlify CMS.
-        </Feature>
-        <Feature icon="mdi:theme-light-dark" title="">
-          <a href=/primary-school style="text-decoration:none"><h3>Science</h3></a>
-          Fully integrated Dark mode gives your users the choice for their favorite viewing mode.
-        </Feature>
-        <Feature icon="mdi:cog" title="">
-          <a href=/primary-school style="text-decoration:none"><h3>Engineering</h3></a>
-          The theme offers some very handy utilities to help you build your website faster.
-        </Feature>
-        <Feature icon="mdi:cog" title="">
-          <a href=/primary-school style="text-decoration:none"><h3>Humanities</h3></a>
-          The theme offers some very handy utilities to help you build your website faster.
-        </Feature>
-        <Feature icon="mdi:cog" title="">
-          <a href=/primary-school style="text-decoration:none"><h3>Pre-Med</h3></a>
-          The theme offers some very handy utilities to help you build your website faster.
-        </Feature>
-        <Feature icon="mdi:cog" title="">
-          <a href=/primary-school style="text-decoration:none"><h3>Pre-Law</h3></a>
-          The theme offers some very handy utilities to help you build your website faster.
-        </Feature>
-        <Feature icon="mdi:cog" title="">
-          <a href=/primary-school style="text-decoration:none"><h3>Computer Science</h3></a>
-          The theme offers some very handy utilities to help you build your website faster.
-        </Feature>
-        <Feature icon="mdi:lighthouse" title="Everything Else">
-          <a href=#contact>Contact us</a> in order to inquire about anything else you are curious about! 
-        </Feature>
+
+
       </div>
     </div>
   </section>
-  <ContentMedia imgSrc="/accessible-components.webp">
-    <h2>Trusted Reputation</h2>
-    <p class="text-2xl">
-      This theme provides plenty of tried and tested Accessible Astro Components. Some are native to this theme and a
-      lot of others are integrated using a <a href="https://github.com/markteekman/accessible-astro-components"
-        >separate package</a
-      >. They'll get you up and running in building an accessible solution for your visitors.
-    </p>
-  </ContentMedia>
+
   <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
     <h2>Prestigious Tutors</h2>
     <p class="text-2xl">
-      Using semantic HTML, landmarks, skip links, screen reader friendly content, aria-labels, keyboard accessible
-      navigation and components, clear outlines and tab indicators and the right color contrast, you're more certain of
-      reaching WCAG AA compliance.
+      At Gifted Center, we understand the unique needs of every child, which is why we have a carefully selected team of prestigious tutors. 
+      
+       Our tutors come from elite academic backgrounds, with advanced degrees from renowned institutions, and many have extensive experience working with accelerated learners.
+   </p>
+  </ContentMedia>
+
+  <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={false}>
+    <h2>Experts in respective Fields</h2>
+    <p class="text-2xl">
+      Each of our tutors is not only an expert in their respective fields but also has a deep understanding of how to nurture the potential of highly capable students.
+      Through personalized teaching strategies, our prestigious tutors help students excel in their studies, while encouraging creativity, critical thinking, and a love for learning. Whether your child is preparing for competitive academic programs or simply seeking a more challenging curriculum, our tutors provide the guidance and support needed to thrive. 
+
     </p>
   </ContentMedia>
   <section class="mb-32 mt-64">
     <div class="container">
       
       <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
-        <Counter count="2" title="Tutors" sub="" />
+        <Counter count="1" title="Tutors" sub="" />
         <Counter count="50+" title="Courses" sub="covered" />
         <Counter count="100" title="Satisfication" sub="Rate" />
         <Counter count={monthsPassed} title="Months" sub="Since launch" />
