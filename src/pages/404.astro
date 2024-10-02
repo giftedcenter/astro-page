@@ -1,5 +1,9 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Counter from '../components/Counter.astro'
+const monthsPassed = new Date().getFullYear() * 12 + new Date().getMonth() - (2024 * 12 + 8);
+
+
 ---
 
 <DefaultLayout title="404">
@@ -12,6 +16,18 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
     <div class="space-content container">
       <p class="text-2xl">This page does not exist. Don't worry though, we got you.</p>
       <a class="button" href="/">Let's get you home Astronout 🚀</a>
+    </div>
+  </section>
+
+  <section class="mb-32 mt-64">
+    <div class="container">
+      
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
+        <Counter count="4" title="Tutors" sub="" />
+        <Counter count="50+" title="Courses" sub="covered" />
+        <Counter count="100" title="Satisfication" sub="Rate" />
+        <Counter count={monthsPassed} title="Months" sub="Since launch" />
+      </div>
     </div>
   </section>
 </DefaultLayout>
