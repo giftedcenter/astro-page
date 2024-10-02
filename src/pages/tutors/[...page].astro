@@ -1,9 +1,8 @@
 ---
 import DefaultLayout from '../../layouts/DefaultLayout.astro'
 import { Card, Pagination } from 'accessible-astro-components'
-import MayzarImage from '/src/assets/img/MayzarTrim.jpg';
-import SamiImage from '/src/assets/img/Sami Trim.jpg';
-import ZeinImage from '/src/assets/img/logo.svg';
+import { Image } from 'astro:assets';
+
 
 
 export async function getStaticPaths({ paginate }) {
@@ -45,7 +44,7 @@ const { page } = Astro.props
             </li>
 
             <li>
-              <Card title="Mayzar Husaini" url='/tutors/mayzar' img={MayzarImage}
+              <Card title="Mayzar Husaini" url='/tutors/mayzar' img='/public/assets/MayzarTrim.jpg'
               footer={" Ontario Tech University: B. Eng H. "}
               >
               Energy Management and AeroThermal Engineer @ Stellantis
@@ -55,7 +54,7 @@ const { page } = Astro.props
               
             </li>
             <li>
-              <Card title="Sami Husaini" url='/tutors/sami' img={SamiImage}
+              <Card title="Sami Husaini" url='/tutors/sami' img='/public/assets/Sami Trim.jpg'
               footer={"UofT: Honours B. Sc. Double major in Chemistry and Biology"}
               >
                 M Sc. Biological Chemistry student UofT
@@ -63,7 +62,7 @@ const { page } = Astro.props
             </li>
 
             <li>
-              <Card title="Zein Rahman" url='/tutors/zein' img={ZeinImage}
+              <Card title="Zein Rahman" url='/tutors/zein' img='/public/assets/zein.jpg'
               footer={"McMaster: B. Sc Honours Health Sciences, Child Health Specialization"}
               >
                 Research Assistant
