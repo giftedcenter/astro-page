@@ -9,7 +9,12 @@ const currentYear = new Date().getFullYear()
   <section class="py-8">
     <div class="container">
       <p>
-        &copy; {currentYear} -  <a href="https://giftedcenter.org/"> Gifted Center</a>. <a href="https://github.com/giftedcenter/astro-page">Github </a>
+        &copy; {currentYear} -  <a href="https://giftedcenter.org/"> Gifted Center</a>.
+         <a href="/about">About Us</a>.
+        <a href="/contact">Contact Us</a>.
+        <a href="/privacy">Privacy Policy</a>.
+        <a href="/terms">Terms of Service</a>. 
+        <a href="https://github.com/giftedcenter/astro-page">Github </a>.
       </p>
     </div>
   </section>
@@ -43,6 +48,20 @@ const currentYear = new Date().getFullYear()
       }
     ],
     "url": "https://giftedcenter.org",
-    "email": "tutoring@giftedcenter.org"
+    "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "43.722708",
+    "longitude": "-79.490816"
+  },
+    "email": "tutoring@giftedcenter.org",
+
+    "sameAs": [
+    "https://facebook.com/giftedtutoring",
+    "https://twitter.com/giftedtutoring",
+    "https://linkedin.com/company/giftedcenter",
+    "https://instagram.com/giftedcenter"
+  ]
+
   }
+  
   </script>

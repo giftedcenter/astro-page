@@ -10,7 +10,16 @@ const monthsPassed = new Date().getFullYear() * 12 + new Date().getMonth() - (20
 <DefaultLayout title="About Us">
   
   
-  <section class="my-64">
+  <section class="my-8">
+ 
+  <div class="container">
+    <h1 class="text-center text-2xl md:text-center lg:text-8xl">
+      <slot><span class="text-gradient">Gifted Center</span>  </slot>
+    </h1>
+  </div>
+</section>
+
+  <section class="my-32">
     <div class="container">
       <h2 class="mb-16 text-6xl">Our Mission</h2>
       <p class="text-2xl">
@@ -19,7 +28,7 @@ const monthsPassed = new Date().getFullYear() * 12 + new Date().getMonth() - (20
     </div>
   </section>
 
-  <section class="my-64">
+  <section class="my-32">
     <div class="container">
       <h2 class="mb-16 text-6xl">What We Offer</h2>
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
@@ -31,6 +40,11 @@ const monthsPassed = new Date().getFullYear() * 12 + new Date().getMonth() - (20
         <Feature icon="mdi:looks" title="">
           <h3>Tutoring by Graduate Students</h3>
           Our tutors are experienced graduate students who have excelled in their fields. They understand the academic challenges students face today and are dedicated to providing expert guidance to overcome them.
+        </Feature>
+
+        <Feature icon="mdi:looks" title="">
+          <h3>Tutoring by Career Professionals</h3>
+          Professionals who have excelled in their fields. They understand the challenges students face today and are dedicated to providing expert guidance to overcome them.
         </Feature>
       </div>
     </div>
@@ -50,6 +64,57 @@ const monthsPassed = new Date().getFullYear() * 12 + new Date().getMonth() - (20
     </p>
   </ContentMedia>
 
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Our Locations</h2>
+      <div class="locations-grid grid grid-cols-1 gap-12 lg:grid-cols-2">
+        <div class="location">
+          <h3>Toronto</h3>
+          
+        </div>
+        <div class="location">
+          <h3>Peterborough</h3>
+          <p>123 Main St, Peterborough, ON, K0L 2H0</p>
+          
+        </div>
+        <div class="location">
+          <h3>Brampton</h3>
+          <p>456 Queen St, Brampton, ON, L6T 3V6</p>
+          
+        </div>
+        <div class="location">
+          <h3>Hamilton</h3>
+          <p>789 King St, Hamilton, ON, L8P 4V2</p>
+          
+        </div>
+        <div class="location">
+          <h3>Scarborough</h3>
+          <p>321 McCowan Rd, Scarborough, ON, M1J 2Z7</p>
+          
+        </div>
+      </div>
+      <div class="map mt-12">
+        <!-- Embed a Google Map here -->
+        <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/search?q=Gifted%20Center%2C%20Gulliver%20Road%2C%20North%20York%2C%20Toronto%2C%20ON%2C%20Canada&key=AIzaSyAJxFKko8M0FyieHF8Y04elrCooSxIbUYM"></iframe>
+
+      </div>
+    </div>
+  </section>
 
 </DefaultLayout>
 
+<style lang="scss">
+  .text-gradient {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-500));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  :global(.darkmode .text-gradient) {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-400));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
