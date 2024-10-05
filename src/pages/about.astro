@@ -1,0 +1,55 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero.astro'
+import Feature from '../components/Feature.astro'
+import Counter from '../components/Counter.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+const monthsPassed = new Date().getFullYear() * 12 + new Date().getMonth() - (2024 * 12 + 8);
+
+---
+<DefaultLayout title="About Us">
+  
+  
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Our Mission</h2>
+      <p class="text-2xl">
+        At <strong>Gifted Center</strong>, we are dedicated to empowering students by providing top-tier academic tutoring. Our mission is to help you <strong>unlock your full potential</strong> and excel in both <strong>high school</strong> and <strong>university</strong> studies. With personalized guidance from graduate-level tutors, we ensure that each student receives the tailored support they need to succeed.
+      </p>
+    </div>
+  </section>
+
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">What We Offer</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="mdi:tailwind" title="">
+          <h3>University & High School Tutoring</h3>
+          We provide tutoring in a wide range of subjects including Math, Science, Humanities, and more. Our sessions are designed with personalized learning plans, available both in-person and online.
+        </Feature>
+ 
+        <Feature icon="mdi:looks" title="">
+          <h3>Tutoring by Graduate Students</h3>
+          Our tutors are experienced graduate students who have excelled in their fields. They understand the academic challenges students face today and are dedicated to providing expert guidance to overcome them.
+        </Feature>
+      </div>
+    </div>
+  </section>
+
+  <ContentMedia imgSrc="/assets/image1.png" reverseImg={true}>
+    <h2>Our Approach</h2>
+    <p class="text-2xl">
+      At <strong>Gifted Center</strong>, we believe in a <strong>student-first approach</strong>. Our tutors work closely with each student to assess their individual learning styles and academic needs. We offer flexible scheduling options, regular feedback, and progress assessments to ensure continuous improvement.
+    </p>
+  </ContentMedia>
+
+  <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={false}>
+    <h2>Why Choose Us?</h2>
+    <p class="text-2xl">
+      Our expert tutors are not only highly qualified graduate students, but they also have a proven track record of success. We offer flexible learning options, including both online and in-person sessions, making it easier to fit into your schedule. Our personalized approach has helped many students achieve their academic goals, and we're confident we can help you too.
+    </p>
+  </ContentMedia>
+
+
+</DefaultLayout>
+
