@@ -1,0 +1,93 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero.astro'
+import Feature from '../components/Feature.astro'
+import Counter from '../components/Counter.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+const monthsPassed = new Date().getFullYear() * 12 + new Date().getMonth() - (2024 * 12 + 8);
+
+---
+<DefaultLayout title="Math" description="Top Mathematics Tutors">
+
+  <Hero/>
+
+  <section class="my-16">
+    <div class="container">
+      <h1 class="text-4xl font-bold mb-8">Mathematics Tutoring Services</h1>
+      <p class="text-xl mb-8">
+        Welcome to <strong>Gifted Center’s Mathematics</strong> tutoring. Whether you're aiming to improve your understanding of the Ontario curriculum or excel in advanced university mathematics, our skilled tutors provide the guidance you need at every level.
+      </p>
+    </div>
+  </section>
+
+  <section class="my-32">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Our Mathematics Programs</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+
+        <Feature icon="mdi:calculator" title="">
+          <h3>Ontario Curriculum</h3>
+          <p>
+            Our tutors cover the complete Ontario mathematics curriculum:
+            <ul class="list-disc pl-5">
+              <li>MPM1D - Principles of Mathematics, Grade 9</li>
+              <li>MPM2D - Principles of Mathematics, Grade 10</li>
+              <li>MCR3U - Functions, Grade 11</li>
+              <li>MHF4U - Advanced Functions, Grade 12</li>
+              <li>MCV4U - Calculus and Vectors, Grade 12</li>
+              <li>MDM4U - Mathematics of Data Management, Grade 12</li>
+            </ul>
+          </p>
+        </Feature>
+
+        <Feature icon="mdi:school" title="">
+          <h3>University Mathematics</h3>
+          <p>
+            Specialized tutoring for university-level courses, assisting with challenging topics such as:
+            <ul class="list-disc pl-5">
+              <li>Calculus and Analytic Geometry</li>
+              <li>Linear Algebra and Differential Equations</li>
+              <li>Statistics and Probability Theory</li>
+              <li>Advanced Abstract Mathematics</li>
+            </ul>
+          </p>
+        </Feature>
+
+        <Feature icon="mdi:book-variant" title="">
+          <h3>Advanced Placement (AP) and International Baccalaureate (IB)</h3>
+          <p>
+            Comprehensive preparation and support for:
+            <ul class="list-disc pl-5">
+              <li>AP Calculus AB and BC</li>
+              <li>AP Statistics</li>
+              <li>IB Mathematics Standard Level (SL)</li>
+              <li>IB Mathematics Higher Level (HL)</li>
+            </ul>
+          </p>
+        </Feature>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="my-16">
+    <div class="container">
+      <h2 class="text-3xl font-bold mb-6">Why Choose Our Math Tutoring?</h2>
+      <p class="mb-4">
+        Our math tutoring is designed to build a strong foundation and enhance problem-solving skills:
+      </p>
+      <ul class="list-disc pl-5 mb-8">
+        <li>Customized study plans tailored to each student’s needs</li>
+        <li>In-depth understanding and application of mathematical concepts</li>
+        <li>Preparation for exams and competitive assessments</li>
+        <li>Expert guidance for university-level research and projects</li>
+      </ul>
+
+      <h3 class="text-2xl font-medium mb-2">Student Success Stories</h3>
+      <blockquote class="italic pl-4 border-l-4 border-primary-300">
+        "The Gifted Center has greatly boosted my confidence in math. I now approach problems strategically and have significantly improved my grades." - High School Student
+      </blockquote>
+    </div>
+  </section>
+
+</DefaultLayout>

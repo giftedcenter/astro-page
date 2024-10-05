@@ -1,0 +1,90 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero.astro'
+import Feature from '../components/Feature.astro'
+import Counter from '../components/Counter.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+const monthsPassed = new Date().getFullYear() * 12 + new Date().getMonth() - (2024 * 12 + 8);
+
+---
+html
+
+Copy code
+<DefaultLayout title="English" description="Exceptional tutoring services in English, humanities, social sciences, and writing at the Gifted Center.">
+
+  <Hero/>
+  <section class="my-16">
+    <div class="container">
+      <h1 class="text-4xl font-bold mb-8">Expert Tutoring in Humanities and Social Sciences</h1>
+      <p class="text-xl mb-8">
+        Welcome to <strong>Gifted Center’s Humanities</strong> tutoring. Our mission is to help you excel in exams, enhance your essay writing skills, and deepen your understanding of humanities and social sciences. Our experienced tutors provide the expertise and guidance you need to succeed.
+      </p>
+      
+      <a href="/contact" class="btn-primary mt-8">Contact Us</a>
+    </div>
+  </section>
+
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Discover Our Humanities and Social Sciences Courses</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        
+        <Feature icon="mdi:book-open-page-variant" title="">
+          <h3>English Literature and Language</h3>
+          <p>
+            Explore a diverse range of texts, authors, and writing styles:
+            <ul class="list-disc pl-5">
+              <li>Study both classic and contemporary literature</li>
+              <li>Understand themes, motifs, and character developments</li>
+              <li>Improve language skills like grammar, syntax, and vocabulary</li>
+            </ul>
+          </p>
+        </Feature>
+
+        <Feature icon="mdi:account-group" title="">
+          <h3>Humanities and Social Sciences</h3>
+          <p>
+            Gain insights into societal and cultural dynamics:
+            <ul class="list-disc pl-5">
+              <li>Explore History and Anthropology</li>
+              <li>Delve into Philosophy and Ethics</li>
+              <li>Study Psychology and Sociology</li>
+            </ul>
+          </p>
+        </Feature>
+
+        <Feature icon="mdi:file-document-edit" title="">
+          <h3>Report and Essay Writing</h3>
+          <p>
+            Strengthen your academic writing skills:
+            <ul class="list-disc pl-5">
+              <li>Develop strong arguments and critical thinking</li>
+              <li>Master research and citation techniques</li>
+              <li>Enhance your editing and proofreading abilities</li>
+            </ul>
+          </p>
+        </Feature>
+      </div>
+    </div>
+  </section>
+
+  <section class="my-16">
+    <div class="container">
+      <h2 class="text-3xl font-bold mb-6">Why Choose Our Tutors?</h2>
+      <p class="mb-4">
+        We focus on building essential skills for success in humanities:
+      </p>
+      <ul class="list-disc pl-5 mb-8">
+        <li>Engaging sessions designed to spark discussion and debate</li>
+        <li>Personalized learning plans tailored to your goals</li>
+        <li>Support with university-level research and writing projects</li>
+        <li>Constructive feedback on assignments to foster growth</li>
+      </ul>
+
+      <h3 class="text-2xl font-medium mb-2">Testimonials From Our Students</h3>
+      <blockquote class="italic pl-4 border-l-4 border-primary-300">
+        "The Gifted Center transformed my approach to writing and literature. My essays are more coherent, and I have a stronger grasp of the subjects I am passionate about." - University Humanities Student
+      </blockquote>
+    </div>
+  </section>
+</DefaultLayout>

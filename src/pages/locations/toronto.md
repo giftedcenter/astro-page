@@ -12,7 +12,7 @@ Welcome to the **Gifted Center's Toronto** location! We are proud to offer top-q
 
 - **Address**: 14 Gulliver Rd, Toronto, ON M6M 2M7
 - **Phone**: [+1-647-987-2869](tel:+16479872869)
-- **Email**: [tutoring@giftedcenter.org](mailto:tutoring@giftedcenter.org)
+- **Email**: [tutoring@giftedcenter.org](https://giftedcenter.org/contact/)
 
 ## Tutoring Programs
 
@@ -38,7 +38,7 @@ See what our students have achieved with the help of our passionate tutors:
 
 ---
 
-For more information or to book a session, [contact us](mailto:tutoring@giftedcenter.org) today. We look forward to helping you succeed!
+For more information or to book a session, [contact us](https://giftedcenter.org/contact/) today. We look forward to helping you succeed!
 
 ---
 

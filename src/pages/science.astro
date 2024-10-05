@@ -1,0 +1,238 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero.astro'
+import Feature from '../components/Feature.astro'
+import Counter from '../components/Counter.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+const monthsPassed = new Date().getFullYear() * 12 + new Date().getMonth() - (2024 * 12 + 8);
+
+---
+<DefaultLayout title="Science" description="Best Science Tutors">
+  
+  <Hero/>
+  <section class="my-16">
+    <div class="container">
+      <h1 class="text-4xl font-bold mb-8">Science Tutoring Services</h1>
+      <p class="text-xl mb-8">
+        Welcome to <strong>Gifted Center’s Science</strong> tutoring. From understanding the fundamentals to tackling advanced concepts, we provide expert guidance across a range of scientific disciplines for both high school and university students.
+      </p>
+
+      <a href="/contact" class="btn-primary mt-8">Contact Us for a Consultation</a>
+    </div>
+  </section>
+
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Our Science Programs</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="mdi:flask" title="">
+          <h3>High School Science (Ontario Curriculum)</h3>
+          <p>
+            Covering key curriculum requirements:
+            <ul class="list-disc pl-5">
+              <li>SNC1D - Science, Grade 9</li>
+              <li>SNC2D - Science, Grade 10</li>
+              <li>SBI3U - Biology, Grade 11</li>
+              <li>SCH3U - Chemistry, Grade 11</li>
+              <li>SPH3U - Physics, Grade 11</li>
+              <li>Biology, Chemistry, and Physics, Grade 12 (SBI4U, SCH4U, SPH4U)</li>
+            </ul>
+          </p>
+        </Feature>
+
+        <Feature icon="mdi:atom" title="">
+          <h3>University Physics</h3>
+          <p>
+            Comprehensive physics tutoring covering:
+            <ul class="list-disc pl-5">
+              <li>Classical Mechanics</li>
+              <li>Electricity and Magnetism</li>
+              <li>Quantum Physics and Thermodynamics</li>
+            </ul>
+          </p>
+        </Feature>
+
+        <Feature icon="mdi:biohazard" title="">
+          <h3>University Biology</h3>
+          <p>
+            Advanced biology topics include:
+            <ul class="list-disc pl-5">
+              <li>Molecular Biology and Genetics</li>
+              <li>Biochemistry and Cell Biology</li>
+              <li>Ecology and Evolutionary Biology</li>
+            </ul>
+          </p>
+        </Feature>
+
+        <Feature icon="mdi:chemical-weapon" title="">
+          <h3>University Chemistry</h3>
+          <p>
+            Expert-guided chemistry topics:
+            <ul class="list-disc pl-5">
+              <li>Organic Chemistry</li>
+              <li>Inorganic Chemistry</li>
+              <li>Analytical and Physical Chemistry</li>
+            </ul>
+          </p>
+        </Feature>
+
+        <Feature icon="mdi:earth" title="">
+          <h3>Other Sciences</h3>
+          <p>
+            Expanding scientific horizons:
+            <ul class="list-disc pl-5">
+              <li>Environmental Science</li>
+              <li>Astronomy and Earth Sciences</li>
+              <li>Interdisciplinary Science Research Projects</li>
+            </ul>
+          </p>
+        </Feature>
+
+        <Feature icon="mdi:show-chart" title="">
+          <h3>AP and IB Science Courses</h3>
+          <p>
+            In-depth preparation for standardized and advanced courses:
+            <ul class="list-disc pl-5">
+              <li>AP Biology, Chemistry, and Physics</li>
+              <li>IB Biology, Chemistry, and Physics (SL and HL)</li>
+            </ul>
+          </p>
+        </Feature>
+      </div>
+    </div>
+  </section>
+  html
+
+  Copy code
+  <DefaultLayout title="Science" description="Top Science Tutoring Services">
+  
+    <Hero/>
+    <section class="my-16">
+      <div class="container">
+        <h1 class="text-4xl font-bold mb-8">Science Tutoring Services</h1>
+        <p class="text-xl mb-8">
+          Welcome to <strong>Gifted Center’s Science</strong> tutoring. We provide expert support in understanding the fundamentals and mastering advanced concepts across various scientific disciplines, tailored for high school and university students.
+        </p>
+  
+        <a href="/contact" class="btn-primary mt-8">Contact Us for a Consultation</a>
+      </div>
+    </section>
+  
+    <section class="my-64">
+      <div class="container">
+        <h2 class="mb-16 text-6xl">Our Science Programs</h2>
+        <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+  
+          <Feature icon="mdi:flask" title="">
+            <h3>High School Science (Ontario Curriculum)</h3>
+            <p>
+              Covering essential curriculum topics:
+              <ul class="list-disc pl-5">
+                <li>SNC1D - Science, Grade 9</li>
+                <li>SNC2D - Science, Grade 10</li>
+                <li>SBI3U - Biology, Grade 11</li>
+                <li>SCH3U - Chemistry, Grade 11</li>
+                <li>SPH3U - Physics, Grade 11</li>
+                <li>Biology, Chemistry, and Physics, Grade 12 (SBI4U, SCH4U, SPH4U)</li>
+              </ul>
+            </p>
+          </Feature>
+  
+          <Feature icon="mdi:atom" title="">
+            <h3>University Physics</h3>
+            <p>
+              Comprehensive tutoring in physics, including:
+              <ul class="list-disc pl-5">
+                <li>Classical Mechanics</li>
+                <li>Electricity and Magnetism</li>
+                <li>Quantum Physics and Thermodynamics</li>
+              </ul>
+            </p>
+          </Feature>
+  
+          <Feature icon="mdi:biohazard" title="">
+            <h3>University Biology</h3>
+            <p>
+              Advanced topics in biology, covering:
+              <ul class="list-disc pl-5">
+                <li>Molecular Biology and Genetics</li>
+                <li>Biochemistry and Cell Biology</li>
+                <li>Ecology and Evolutionary Biology</li>
+              </ul>
+            </p>
+          </Feature>
+  
+          <Feature icon="mdi:chemical-weapon" title="">
+            <h3>University Chemistry</h3>
+            <p>
+              Guided expertise in chemistry, focusing on:
+              <ul class="list-disc pl-5">
+                <li>Organic Chemistry</li>
+                <li>Inorganic Chemistry</li>
+                <li>Analytical and Physical Chemistry</li>
+              </ul>
+            </p>
+          </Feature>
+  
+          <Feature icon="mdi:earth" title="">
+            <h3>Other Sciences</h3>
+            <p>
+              Expand your scientific knowledge with:
+              <ul class="list-disc pl-5">
+                <li>Environmental Science</li>
+                <li>Astronomy and Earth Sciences</li>
+                <li>Interdisciplinary Science Research Projects</li>
+              </ul>
+            </p>
+          </Feature>
+  
+          <Feature icon="mdi:show-chart" title="">
+            <h3>AP and IB Science Courses</h3>
+            <p>
+              Thorough preparation for advanced courses:
+              <ul class="list-disc pl-5">
+                <li>AP Biology, Chemistry, and Physics</li>
+                <li>IB Biology, Chemistry, and Physics (SL and HL)</li>
+              </ul>
+            </p>
+          </Feature>
+        </div>
+      </div>
+    </section>
+  
+    <section class="my-16">
+      <div class="container">
+        <h2 class="text-3xl font-bold mb-6">Lab Report Writing Support</h2>
+        <p class="mb-8">
+          Lab report writing is a crucial part of science education, helping students effectively convey their findings. Our tutors offer extensive support in:
+        </p>
+        <ul class="list-disc pl-5 mb-8">
+          <li>Understanding lab report structure and elements</li>
+          <li>Analyzing data and drawing clear conclusions</li>
+          <li>Developing effective scientific writing and formatting skills</li>
+          <li>Ensuring academic integrity and proper citation in reports</li>
+        </ul>
+      </div>
+    </section>
+  
+    <section class="my-16">
+      <div class="container">
+        <h2 class="text-3xl font-bold mb-6">Why Choose Our Science Tutoring?</h2>
+        <p class="mb-4">
+          Our science tutoring is designed to develop a thorough understanding and enthusiasm for science:
+        </p>
+        <ul class="list-disc pl-5 mb-8">
+          <li>Customized tutoring tailored to specific subjects and student needs</li>
+          <li>Hands-on experiments and problem-solving to reinforce concepts</li>
+          <li>Preparation for lab exams and complex assessments</li>
+          <li>Guidance for pursuing scientific research and higher education studies</li>
+        </ul>
+  
+        <h3 class="text-2xl font-medium mb-2">Student Success Stories</h3>
+        <blockquote class="italic pl-4 border-l-4 border-primary-300">
+          "Thanks to the Gifted Center, I gained confidence in handling challenging problems in chemistry and achieved high grades in my courses." - University Science Student
+        </blockquote>
+      </div>
+    </section>
+  
+  </DefaultLayout>

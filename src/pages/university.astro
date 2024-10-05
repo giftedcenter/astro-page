@@ -1,0 +1,73 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Feature from '../components/Feature.astro'
+
+---
+
+<DefaultLayout title="University Tutoring Services" description=Discover our personalized tutoring services for university students across diverse programs and disciplines at the Gifted Center>
+  <section class="my-16">
+    <div class="container">
+      <h1 class="text-4xl font-bold mb-8">University Tutoring Services</h1>
+      <p class="text-xl mb-8">
+        At the <strong>Gifted Center</strong>, we specialize in helping university students excel in their studies. Our experienced tutors are here to provide personalized guidance across a range of subjects, ensuring you achieve your full potential.
+      </p>
+
+      <a href="/contact" class="btn-primary mt-8">Contact Us for a Free Consultation</a>
+    </div>
+  </section>
+
+
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Our Programs and Expertise</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="mdi:tailwind"  title="">
+          <a  style="text-decoration:none"><h3>STEM Subjects</h3></a>
+          Master complex subjects with our expert tutors in Mathematics, Physics, Chemistry, Biology, and Engineering.
+        </Feature>
+        <Feature icon="mdi:looks" title="">
+          <a  style="text-decoration:none"><h3>Humanities and Social Sciences</h3></a>
+          Enhance your analytical and writing skills in subjects like Literature, History, Sociology, and Psychology.
+        </Feature>
+
+        <Feature icon="mdi:book-open-page-variant" title="">
+          <a  style="text-decoration:none"><h3>Business and Economics</h3></a>
+          Gain insight into Accounting, Finance, Marketing, and Economic Theory with targeted tutoring sessions.
+
+
+        </Feature>
+
+        <Feature title="">
+            <a  style="text-decoration:none"><h3>Computer Science and IT</h3></a>
+            <p>
+              Learn and advance your skills in Programming, Data Science, and Software Development.
+            </p>
+</Feature>
+      </div>
+    </div>
+  </section>
+
+
+  
+
+  <section class="my-16">
+    <div class="container">
+      <h2 class="text-3xl font-bold mb-6">Our Approach to University Tutoring</h2>
+      <p class="mb-4">
+        Our methodology is designed to align with university standards and expectations, offering:
+      </p>
+      <ul class="list-disc pl-5 mb-8">
+        <li>Customized study plans to suit your individual learning style.</li>
+        <li>One-on-one and group sessions for an interactive and engaging learning experience.</li>
+        <li>Flexible scheduling to accommodate your busy university lifestyle.</li>
+        <li>Resources and tools that match your university curriculum requirements.</li>
+      </ul>
+
+      <h3 class="text-2xl font-medium mb-2">Success Stories</h3>
+      <blockquote class="italic pl-4 border-l-4 border-primary-300">
+        "Through Gifted Center’s targeted tutoring, I improved my grades and developed a deeper understanding of my subjects, allowing me to pursue my career goals with confidence." - University Student
+      </blockquote>
+    </div>
+  </section>
+</DefaultLayout>
+
