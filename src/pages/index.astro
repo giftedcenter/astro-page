@@ -14,9 +14,8 @@ const monthsPassed = new Date().getFullYear() * 12 + new Date().getMonth() - (20
     <div class="container">
       <h2 class="mb-16 text-6xl">Unlock your potential</h2>
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-2">
-        <Feature icon="mdi:looks" title="">
-          <a href=/college style="text-decoration:none"><h3> College</h3></a>
-          college blurb.
+        <Feature icon="mdi:school" title="">
+          <a href=/college style="text-decoration:none"><h3> College </h3> </a> Our tutoring services support college students in vocational and technical programs. With a focus on applied sciences, business, technology, and trades to help students develop both practical and theoretical skills for the workforce or further studies.
         </Feature>
 
         <Feature icon="mdi:book-open-page-variant" title="">
@@ -63,12 +62,34 @@ const monthsPassed = new Date().getFullYear() * 12 + new Date().getMonth() - (20
 
   <section class="mb-32 mt-64">
     <div class="container">
-      
-      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
-        <Counter count="" icon="account-box" title="Facebook" sub="" />
-        <Counter count="" title="Twitter" sub="" />
-        <Counter count="" title="Instagram" sub="" />
-        <Counter count={monthsPassed} title="Tiktok" sub="" />
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4 text-center">
+        <div class="social-item">
+          <a href="https://facebook.com/giftedtutoring" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook fa-3x"></i>
+            <p class="text-4xl font-semibold">Facebook</p>
+          </a>
+        </div>
+        
+        <div class="social-item">
+          <a href="https://twitter.com/giftedtutoring" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter fa-3x"></i>
+            <p class="text-4xl font-semibold">Twitter</p>
+          </a>
+        </div>
+        
+        <div class="social-item">
+          <a href="https://instagram.com/giftedtutor" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram fa-3x"></i>
+            <p class="text-4xl font-semibold">Instagram</p>
+          </a>
+        </div>
+        
+        <div class="social-item">
+          <a href="https://tiktok.com/@giftedtutoringcenter" target="_blank" aria-label="Tiktok">
+            <i class="fab fa-tiktok fa-3x"></i>
+            <p class="text-4xl font-semibold">Tiktok</p>
+          </a>
+        </div>
       </div>
     </div>
   </section>

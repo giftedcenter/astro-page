@@ -41,6 +41,10 @@ const {
       image={image}
       author={author}
     />
+        <!-- font awesome for social media -->
+        <script src="https://kit.fontawesome.com/b6d341cf0c.js" crossorigin="anonymous"></script>
+
+
   </head>
   <body>
     <Header />
@@ -114,6 +118,18 @@ const {
           }
         }
       }
+
+  .social-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .social-item i {
+    color: var(--action-color);
+    margin-bottom: 8px;
+  }
+
     </style>
   </body>
 </html>
