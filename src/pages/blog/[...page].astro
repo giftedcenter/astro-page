@@ -1,7 +1,7 @@
 ---
-import DefaultLayout from '../../layouts/DefaultLayout.astro'
-import { getCollection } from 'astro:content'
-import { Pagination } from 'accessible-astro-components'
+import DefaultLayout from '../../layouts/DefaultLayout.astro';
+import { getCollection } from 'astro:content';
+import { Pagination } from 'accessible-astro-components';
 
 export async function getStaticPaths({ paginate }) {
   const posts = await getCollection('posts');
@@ -23,7 +23,8 @@ const { page } = Astro.props;
     <div class="container">
       <ul class="grid my-3">
         {page.data.map(post => (
-          <li key={post.id}>
+          <li key={post.slug}>
+            <!-- Use the slug to link directly to the markdown page path -->
             <a href={`/blog/${post.slug}`} class="block mb-4 p-4 border rounded">
               <h2 class="text-xl mb-2">{post.data.title}</h2>
               <p class="text-sm">{post.data.description}</p>

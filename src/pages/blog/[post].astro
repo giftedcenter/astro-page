@@ -1,6 +1,6 @@
 ---
-import DefaultLayout from '../../layouts/DefaultLayout.astro'
-import { getCollection } from 'astro:content';
+import MarkdownPosts from '../../layouts/MarkdownPosts.astro'
+import { getCollection } from 'astro:content'
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
@@ -13,15 +13,8 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 ---
 
-<DefaultLayout title={post.data.title} description={post.data.description}>
-  <section class="my-12">
-    <div class="container">
-      <h1>{post.data.title}</h1>
-      <p class="text-sm text-gray-600">Published on {post.data.publishDate} by {post.data.author}</p>
-
-      <article class="prose mt-8">
-        {post.body}
-      </article>
-    </div>
-  </section>
-</DefaultLayout>
+<MarkdownPosts frontmatter={post.data}>
+  <article>
+    {post.body}
+  </article>
+</MarkdownPosts>
