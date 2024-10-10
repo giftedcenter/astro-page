@@ -48,7 +48,7 @@ Einstein once sowed the seeds of relativity across the fields of spacetime, wher
 
 Consider the mind-bending formula that describes this playful reality:
 
-$$ E = mc^2 $$
+$$E = mc^2$$
 
 Here, energies are not sapped; instead, they are transmuted into dances of photons and matter.
 
