@@ -15,57 +15,75 @@ const { page } = Astro.props
 ---
 
 <DefaultLayout title="Career"
-description="An example of a blog with dynamic content fetched from JSONPlaceholder using the title, body and userId."
+description="Start your career in education with the Gifted Center of Tutoring."
 >
+
 <section class="hero my-24">
   <div class="container">
     <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
       <div class="flex flex-col items-center gap-8 md:items-start">
-        <h3 class="text-center text-6xl md:text-left lg:text-8xl">
+        <h1 class="text-center text-6xl md:text-left lg:text-8xl">
           <slot>Start your career with <span class="text-gradient">Gifted Center</span>  of Tutoring </slot>
-        </h3>
+        </h1>
         <div class="flex flex-col gap-3 min-[500px]:flex-row">
           <a class="button has-icon" href=mailto:jobs@giftedcenter.org>
             <Icon name="ion:star-outline" />
              Submit your resume: jobs@giftedcenter.org
           </a>
-         
+
         </div>
-                  <!-- Available Positions -->
-                  <h2 class="text-4xl font-bold mt-8">Positions Available:</h2>
-                  <ul class="list-disc pl-5">
-                    <!-- Primary School Programs -->
-                    <li>
-                      <strong>Primary School Programs:</strong>
-                      <ul class="list-inside list-disc">
-                        <li>Math Lead</li>
-                        <li>Early Reading and Writing Lead</li>
-                        <li>STEM Lead</li>
-                      </ul>
-                    </li>
-        
-                    <!-- Secondary School Programs -->
-                    <li>
-                      <strong>Secondary School Programs Manager</strong>
-                    </li>
-        
-                    <!-- Tutors -->
-                    <li>
-                      <strong>Tutors:</strong>
-                      <ul class="list-inside list-disc">
-                        <li>Chemistry</li>
-                        <li>Biology</li>
-                        <li>Medical Subjects</li>
-                        <li>Engineering</li>
-                        <li>Humanities</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
       </div>
       <img class="hidden lg:block" src={src} alt="" decoding="async" />
     </div>
   </div>
+</section>
+
+
+<section class="my-16">
+  <div class="container">
+        <!-- Available Positions -->
+        <h1 class="text-6xl font-bold mt-8">Positions Available:</h1>
+        <ul class="list-disc pl-5">
+          <!-- Primary School Programs -->
+          <li>
+           <a href="/primary-school"> <h2><strong>Primary School Programs:</strong></h2> </a>
+            <h4><ul class="list-inside list-disc">
+              <li>Math Lead</li>
+              <li>Early Reading and Writing Lead</li>
+              <li>STEM Lead</li>
+            </ul></h4>
+          </li>
+
+          <!-- Secondary School Programs -->
+          <li>
+            <a href="/secondary-school"><h2><strong>Secondary School Programs Manager</strong></h2></a>
+          </li>
+
+          <li>
+            <a href="/college"><h2><strong>College Programs Manager</strong></h2></a>
+          </li>
+
+          <!-- Tutors -->
+          <li>
+            <a href="/university"><h2><strong>University Tutors:</strong></h2></a>
+            <h4><ul class="list-inside list-disc">
+              <li>Chemistry</li>
+              <li>Biology</li>
+              <li>Medical Subjects</li>
+              <li>Engineering</li>
+              <li>Physics </li>
+              <li>Humanities</li>
+            </ul></h4>
+          </li>
+        
+        <li>
+          <a href="/jobs/socialmedia"> <h2><strong>Social Media and Marketing</strong></h2> </a>
+          <h4><ul class="list-inside list-disc">
+            <li>Social Media Assistant</li>
+          </ul></h4>
+        </li>
+      </ul>
+</div>
 </section>
 
 
