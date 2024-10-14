@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/MarkdownLayout.astro
-title: Markdown Page
+title: Primary School
 ---
 
 # Primary School Programs
@@ -69,3 +69,6 @@ At **Gifted Center**, we believe in nurturing young minds from the very beginnin
 ---
 
 Want to enroll or learn more? [Contact us](#contact) for more details on our primary school programs!
+
+K-12 programs
+K-12 tutoring
