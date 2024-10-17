@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownLayout.astro
-title: Ashiful Bhuiyan
+title: Zein Rahman
 ---
 
 # Meet Your Biology Tutor:
