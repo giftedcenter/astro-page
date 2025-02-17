@@ -3,61 +3,61 @@ layout: ../../layouts/MarkdownLayout.astro
 title:  Malik White
 ---
 
+# Meet your Biology Tutor: 
+
 # Malik White
+
 
 ## Academic Excellence
 
-Our tutor, Malik, holds an Honours Bachelor of Science in Neuroscience & Human Biology and is currently completing a Master’s in Laboratory Medicine & Pathobiology at the University of Toronto. His research focuses on gene delivery strategies using focused ultrasound for neurodegenerative disorders, which requires a strong foundation in physics, chemistry, cell biology, neuroanatomy, and biostatistics—all essential disciplines in the life sciences.
-
+Our tutor, Malik, holds an **Honours Bachelor of Science in Neuroscience & Human Biology** and is currently completing a **Master’s in Laboratory Medicine & Pathobiology** at the prestigious University of Toronto. His cutting-edge research focuses on gene delivery strategies using focused ultrasound to treat neurodegenerative disorders. This research demands a mastery of disciplines such as physics, chemistry, cell biology, neuroanatomy, and biostatistics—fields in which Malik excels.
 
 
 ## Expertise and Experience
 
 
 
-With years of experience mentoring students, Malik specializes in university-level science courses, covering key disciplines such as biology, anatomy, chemistry, and physics, as well as quantitative analysis in the life sciences. His areas of expertise include:
+With extensive experience mentoring students, Malik specializes in university-level science courses and pre-medical preparation. He offers support across a broad range of subjects, ensuring students develop both the theoretical understanding and practical skills needed to excel:
 
-• Human Anatomy & Physiology (including neuroanatomy and organ systems)
+- • Human Anatomy & Physiology (including neuroanatomy and organ systems)
 
-• Cell & Molecular Biology (including genetics and gene therapy applications)
+- • Cell & Molecular Biology (including genetics and gene therapy applications)
 
-• Biochemistry & Metabolism
+- • Biochemistry & Metabolism
 
-• Neuroscience & Neurophysiology
+- • Neuroscience & Neurophysiology
 
-• Histology & Microscopy
+- • Histology & Microscopy
 
-• Biostatistics & Research Methods
+- • Biostatistics & Research Methods
 
-• Physics for Life Sciences (mechanics, electromagnetism, and waves)
+- • Physics for Life Sciences (mechanics, electromagnetism, and waves)
 
-• General & Organic Chemistry (chemical reactions, kinetics, thermodynamics)
+- • General & Organic Chemistry (chemical reactions, kinetics, thermodynamics)
 
-• Quantitative Analysis & Experimental Design
+- • Quantitative Analysis & Experimental Design
 
 
 
-Malik’s interdisciplinary background enables him to help students connect scientific principles across multiple subjects, making complex topics more intuitive and applicable to real-world medical and research contexts.
+Malik’s interdisciplinary background allows him to bridge the gap between theoretical science and practical application, helping students understand how diverse scientific principles converge in medicine and research.
 
 
 
 ## Advanced Skills
 
+Malik brings a wealth of practical expertise in scientific methodologies and technologies, ensuring students gain hands-on knowledge:
 
+- • Histological & Cellular Imaging: Proficient in immunohistochemistry, microscopy, and digital image analysis (e.g., ImageJ).
 
-Malik is proficient in:
+- • Experimental Design & Statistical Analysis (biostatistics, data visualization)
 
-• Interpreting Histological and Cellular Imaging (e.g., immunohistochemistry, ImageJ analysis)
+- • Neuroanatomy & Functional Brain Mapping
 
-• Experimental Design & Statistical Analysis (biostatistics, data visualization)
+- • Molecular Techniques in Research (including gene therapy applications)
 
-• Neuroanatomy & Functional Brain Mapping
+- • Understanding Physics in Biomedical Applications (focused ultrasound, medical imaging, and biomechanics)
 
-• Molecular Techniques in Research (including gene therapy applications)
-
-• Understanding Physics in Biomedical Applications (focused ultrasound, medical imaging, and biomechanics)
-
-• Chemistry in Biological Systems (enzyme kinetics, molecular interactions, and reaction mechanisms)
+- • Chemistry in Biological Systems (enzyme kinetics, molecular interactions, and reaction mechanisms)
 
 
 
@@ -66,8 +66,14 @@ His expertise ensures that students gain a strong grasp of fundamental scientifi
 
 ## Teaching Philosophy
 
-Malik is dedicated to helping students build a deep understanding of science by breaking down complex biological, chemical, physical, and quantitative concepts into clear, manageable steps. His approach emphasizes critical thinking, application-based learning, and confidence-building, ensuring that students can excel in even the most challenging science courses.
+Malik is deeply committed to helping students master scientific concepts by fostering curiosity and critical thinking. His teaching approach emphasizes:
 
+- • Simplifying Complexity: Breaking down challenging concepts into clear, digestible steps.
 
+- • Application-Based Learning: Encouraging students to apply theoretical knowledge to practical, real-world problems.
 
-Whether you need support in physics, chemistry, human anatomy, cell biology, neuroscience, or research methods, Malik’s patient and structured approach provides a supportive and effective learning experience tailored to your academic needs.
+- • Building Scientific Confidence: Supporting students as they tackle complex topics, helping them develop independent problem-solving abilities.
+
+- • Tailored Support: Adjusting teaching methods to suit individual learning styles and academic goals.
+
+Whether you're navigating the complexities of human anatomy, mastering biostatistics, or preparing for a career in the biomedical sciences, Malik White offers the expertise, mentorship, and encouragement to help you succeed
