@@ -9,7 +9,7 @@ title: Ashiful Bhuiyan
 
 ## Academic Excellence
 
-Our math tutor holds a degree in Mathematical Physics and is currently pursuing a Master's in Data Science. This strong academic foundation combines rigorous mathematical theory with modern data science techniques, providing a unique perspective on the subject.
+Our math tutor holds a degree in Mathematical Physics.
 
 ## Expertise and Experience
 
