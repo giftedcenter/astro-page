@@ -4,80 +4,73 @@ import { SkipLinks } from 'accessible-astro-components'
 import { Icon } from 'astro-icon/components'
 ---
 
-<header>
-  
+<header class="site-header">
   <SkipLinks />
+
   <Navigation>
     <li class="menu-item">
       <a href="/">Home</a>
     </li>
+
     <li class="menu-item">
       <a href="/tutors/">Tutors</a>
     </li>
+
     <li class="menu-item has-dropdown">
       <button aria-haspopup="true" aria-expanded="false">Programs</button>
       <ul class="dropdown-menu">
-        <li class="submenu-item">
-          <a href="/primary-school">Training Camp</a>
-        </li>
-        <li class="submenu-item">
-          <a href="/secondary-school">Gifted Core</a>
-        </li>
-        </li>
-        <li class="submenu-item">
-          <a href="/university">Career</a>
-        </li>
+        <li class="submenu-item"><a href="/training-camp">Training Camp</a></li>
+        <li class="submenu-item"><a href="/olympiad-math">Olympiad Math</a></li>
+        <li class="submenu-item"><a href="/ai-literacy">AI Literacy</a></li>
+        <li class="submenu-item"><a href="/career-counseling">Career Counseling</a></li>
       </ul>
     </li>
-    <li class="menu-item">
-      <a href="/jobs/"> Career </a>
-  </li>
-  <li class="menu-item">
-    <a href="/blog/"> Blog </a>
-</li>
-
-  <li class="menu-item">
-    <a href="/contact/"> Contact Us </a>
-</li>
-  
 
     <li class="menu-item">
-      <a href=/about/ >About Us</a>
-    </a>
+      <a href="/jobs/">Careers</a>
     </li>
-   
-    
-  </Navigation>
 
+    <li class="menu-item">
+      <a href="/blog/">Blog</a>
+    </li>
+
+    <li class="menu-item">
+      <a href="/contact/">Contact Us</a>
+    </li>
+
+    <li class="menu-item">
+      <a href="/about/">About Us</a>
+    </li>
+  </Navigation>
 </header>
 
 <style lang="scss" is:global>
   @use '../assets/scss/base/outline' as *;
 
-  header {
-
+  .site-header {
     .contact-info {
-      display: flex; /* Change to flex for horizontal alignment */
-      gap: 20px; /* Adds spacing between phone and email links */
+      display: flex;
+      gap: 20px;
       align-items: flex-end;
-      
+
       a {
         color: var(--action-color);
         text-decoration: none;
         margin-bottom: 5px;
-        
+
         &:hover {
           color: var(--action-color-state);
         }
       }
     }
-      .type-icon a {
+
+    .type-icon a {
       display: block;
 
       [data-icon] {
+        width: 30px;
         height: auto;
         margin-top: -4px;
-        width: 30px;
 
         path {
           fill: var(--action-color);
