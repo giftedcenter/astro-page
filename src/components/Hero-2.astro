@@ -1,0 +1,59 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const {
+  title = 'AI Literacy for Everyone',
+  subtitle = 'Ages 12+. No coding required.',
+  imageSrc = '/ai-literacy.png',
+  imageAlt = 'AI Literacy Illustration',
+  buttonText = 'Register Now',
+  buttonLink = '/register',
+} = Astro.props
+---
+
+<section class="hero my-24">
+  <div class="container">
+    <div class="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
+      <div class="flex flex-col items-center gap-6 md:items-start">
+        <h1 class="text-center text-5xl md:text-left lg:text-7xl font-bold leading-tight">
+          <span class="text-gradient">{title}</span>
+        </h1>
+        <p class="text-lg text-center md:text-left text-gray-300 max-w-prose">
+          {subtitle}<br/>
+          Learn how AI works and how it's shaping the world — all without writing a single line of code.
+        </p>
+        <div class="flex flex-col gap-3 min-[500px]:flex-row mt-4">
+          <a class="button has-icon" href={buttonLink}>
+            <Icon name="ion:sparkles-outline" />
+            {buttonText}
+          </a>
+          <a class="button has-icon color-secondary" href="/contact">
+            <Icon name="ion:chatbubble-ellipses-outline" />
+            Ask a Question
+          </a>
+        </div>
+      </div>
+      <img class="hidden lg:block rounded-xl shadow-xl" src={imageSrc} alt={imageAlt} decoding="async" />
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .text-gradient {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-500));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  :global(.darkmode .text-gradient) {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-400));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero p {
+    color: var(--text-muted);
+  }
+</style>

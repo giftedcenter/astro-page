@@ -7,41 +7,54 @@ import { Icon } from 'astro-icon/components'
 <header class="site-header">
   <SkipLinks />
 
-  <Navigation>
-    <li class="menu-item">
-      <a href="/">Home</a>
-    </li>
+<Navigation>
+  <li class="menu-item">
+    <a href="/">Home</a>
+  </li>
 
-    <li class="menu-item">
-      <a href="/tutors/">Tutors</a>
-    </li>
+  <li class="menu-item has-dropdown">
+    <button aria-haspopup="true" aria-expanded="false">Tutoring</button>
+    <ul class="dropdown-menu">
+      <li class="submenu-item"><a href="/secondary-school">High School</a></li>
+      <li class="submenu-item"><a href="/college">College</a></li>
+      <li class="submenu-item"><a href="/university">University</a></li>
+      <li class="submenu-item"><a href="/tutors/">Meet Our Tutors</a></li>
+    </ul>
+  </li>
 
-    <li class="menu-item has-dropdown">
-      <button aria-haspopup="true" aria-expanded="false">Programs</button>
-      <ul class="dropdown-menu">
-        <li class="submenu-item"><a href="/training-camp">Training Camp</a></li>
-        <li class="submenu-item"><a href="/olympiad-math">Olympiad Math</a></li>
-        <li class="submenu-item"><a href="/ai-literacy">AI Literacy</a></li>
-        <li class="submenu-item"><a href="/career-counseling">Career Counseling</a></li>
-      </ul>
-    </li>
+  <li class="menu-item has-dropdown">
+    <button aria-haspopup="true" aria-expanded="false">Programs</button>
+    <ul class="dropdown-menu">
+      <li class="submenu-item"><a href="/training-camp/">Coding Camp</a></li>
+      <li class="submenu-item"><a href="/olympiad-math/">Olympiad Math</a></li>
+      <li class="submenu-item"><a href="/ai-literacy/">AI Literacy Course</a></li>
+      <li class="submenu-item"><a href="/uni-prep/">University and Job Prep</a></li>
+      <li class="submenu-item"><a href="/volunteer/">Volunteering</a></li>
+    </ul>
+  </li>
 
-    <li class="menu-item">
-      <a href="/jobs/">Careers</a>
-    </li>
+  <li class="menu-item">
+    <a href="/careers/">Careers</a>
+  </li>
 
-    <li class="menu-item">
-      <a href="/blog/">Blog</a>
-    </li>
+  <li class="menu-item">
+    <a href="/volunteer/">Volunteer</a>
+  </li>
 
-    <li class="menu-item">
-      <a href="/contact/">Contact Us</a>
-    </li>
+  <li class="menu-item">
+    <a href="/contact/">Contact Us</a>
+  </li>
 
-    <li class="menu-item">
-      <a href="/about/">About Us</a>
-    </li>
-  </Navigation>
+  <li class="menu-item has-dropdown">
+    <button aria-haspopup="true" aria-expanded="false">About Us</button>
+    <ul class="dropdown-menu">
+      <li class="submenu-item"><a href="/about/">About the Gifted Center</a></li>
+      <li class="submenu-item"><a href="/tutors/">Meet the Tutors</a></li>
+      <li class="submenu-item"><a href="/blog/">Blog</a></li>
+    </ul>
+  </li>
+</Navigation>
+
 </header>
 
 <style lang="scss" is:global>

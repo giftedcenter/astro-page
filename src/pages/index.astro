@@ -42,39 +42,86 @@ const monthsPassed = new Date().getFullYear() * 12 + new Date().getMonth() - (20
     </div>
   </section>
 
-  <section class="mb-32 mt-64">
-    <div class="container">
-      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4 text-center">
-        <div class="social-item">
-          <a href="https://facebook.com/giftedtutoring" target="_blank" aria-label="Facebook">
-            <i class="fab fa-facebook fa-3x"></i>
-            <p class="text-4xl font-semibold">Facebook</p>
-          </a>
-        </div>
-        
-        <div class="social-item">
-          <a href="https://twitter.com/giftedtutoring" target="_blank" aria-label="Twitter">
-            <i class="fab fa-twitter fa-3x"></i>
-            <p class="text-4xl font-semibold">Twitter</p>
-          </a>
-        </div>
-        
-        <div class="social-item">
-          <a href="https://instagram.com/giftedtutor" target="_blank" aria-label="Instagram">
-            <i class="fab fa-instagram fa-3x"></i>
-            <p class="text-4xl font-semibold">Instagram</p>
-          </a>
-        </div>
-        
-        <div class="social-item">
-          <a href="https://tiktok.com/@giftedtutoringcenter" target="_blank" aria-label="Tiktok">
-            <i class="fab fa-tiktok fa-3x"></i>
-            <p class="text-4xl font-semibold">Tiktok</p>
-          </a>
-        </div>
+<section class="mb-32 mt-64">
+  <div class="container">
+    <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-5 text-center">
+
+      <!-- Facebook -->
+      <div class="social-item">
+     <a
+  href="https://facebook.com/giftedtutoring"
+  target="_blank"
+  aria-label="Facebook"
+  class="!no-underline flex flex-col items-center text-blue-600 hover:text-blue-400 hover:drop-shadow-[0_0_8px_#3b82f6] transition-all duration-300"
+>
+  <i class="fab fa-facebook-f fa-3x"></i>
+  <p class="text-2xl font-semibold mt-4">Facebook</p>
+</a>
       </div>
+
+      <!-- Bluesky -->
+   <div class="social-item">
+  <a
+    href="https://bsky.app/profile/giftedcenter.bsky.social"
+    target="_blank"
+    aria-label="Bluesky"
+    class="!no-underline flex flex-col items-center text-blue-600 hover:text-blue-400 hover:drop-shadow-[0_0_8px_#3b82f6] transition-all duration-300"
+  >
+    <svg
+      role="img"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-12 h-12 fill-current block mb-4"
+    >
+      <title>Bluesky</title>
+            <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"/>
+       </svg>
+    <p class="text-2xl font-semibold">Bluesky</p>
+  </a>
+</div>
+      <!-- Twitter -->
+      <div class="social-item">
+        <a
+          href="https://twitter.com/giftedtutoring"
+          target="_blank"
+          aria-label="Twitter"
+          class="!no-underline flex flex-col items-center text-blue-600 hover:text-blue-400 hover:drop-shadow-[0_0_8px_#3b82f6] transition-all duration-300"
+        >
+          <i class="fab fa-twitter fa-3x"></i>
+          <p class="text-2xl font-semibold mt-4">Twitter</p>
+        </a>
+      </div>
+
+      <!-- Instagram -->
+      <div class="social-item">
+        <a
+          href="https://instagram.com/giftedtutor"
+          target="_blank"
+          aria-label="Instagram"
+          class="!no-underline flex flex-col items-center text-pink-500 hover:text-pink-400 hover:drop-shadow-[0_0_8px_#ec4899] transition-all duration-300"
+        >
+          <i class="fab fa-instagram fa-3x"></i>
+          <p class="text-2xl font-semibold mt-4">Instagram</p>
+        </a>
+      </div>
+
+      <!-- TikTok -->
+      <div class="social-item">
+        <a
+          href="https://tiktok.com/@giftedcenter"
+          target="_blank"
+          aria-label="TikTok"
+          class="!no-underline flex flex-col items-center text-black hover:text-red-600 hover:drop-shadow-[0_0_8px_#dc2626] transition-all duration-300"
+        >
+          <i class="fab fa-tiktok fa-3x"></i>
+          <p class="text-2xl font-semibold mt-4">TikTok</p>
+        </a>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
   <h1 id="contact"> </h1>
 </DefaultLayout>

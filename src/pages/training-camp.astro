@@ -1,0 +1,154 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero-2.astro'
+import Feature from '../components/Feature.astro'
+import Counter from '../components/Counter.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+import { SkipLinks } from 'accessible-astro-components'
+---
+
+<DefaultLayout title="Gifted Center Training Camp 2025 | Gifted Center">
+  <SkipLinks />
+
+  <Hero
+    title="Gifted Center Training Camp 2025"
+    subtitle="Prove your passion. Earn your place."
+    buttonText="Join the Challenge"
+    buttonLink="https://github.com/giftedcenter/training-camp-2025"
+    imageSrc="/assets/training-camp.png"
+    imageAlt="Campfire coding illustration"
+  />
+
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl font-bold">🎯 What is the Training Camp?</h2>
+      <p class="text-2xl leading-relaxed">
+        The Gifted Center Training Camp is a <strong>selective summer challenge</strong> for ambitious students who want to sharpen their technical skills and earn the opportunity to volunteer at the Gifted Center.
+        <br /><br />
+        Only those who complete all 9 weeks of challenges — across Python, web development, AI, data science, and math — will earn the <strong>Volunteer Certification</strong> and a place in our team.
+      </p>
+    </div>
+  </section>
+
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl font-bold">🧠 What You'll Learn</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-2">
+        <Feature icon="mdi:web" title="">
+          <h3 class="text-2xl font-semibold mb-2">Website Building</h3>
+          Build beautiful, fast websites with Astro and Tailwind CSS.
+        </Feature>
+
+        <Feature icon="mdi:language-python" title="">
+          <h3 class="text-2xl font-semibold mb-2">Python Programming</h3>
+          Learn essential Python skills for development, data science, and automation.
+        </Feature>
+
+        <Feature icon="mdi:github" title="">
+          <h3 class="text-2xl font-semibold mb-2">GitHub Workflow</h3>
+          Understand version control, pull requests, branches, and contributing to repos.
+        </Feature>
+
+        <Feature icon="mdi:chart-line" title="">
+          <h3 class="text-2xl font-semibold mb-2">Data Science & Visualization</h3>
+          Use real datasets and Python libraries to make sense of the world around you.
+        </Feature>
+
+        <Feature icon="mdi:image-search-outline" title="">
+          <h3 class="text-2xl font-semibold mb-2">Computer Vision</h3>
+          Explore image analysis, filters, and edge detection—all in Jupyter notebooks.
+        </Feature>
+
+        <Feature icon="mdi:calculator-variant" title="">
+          <h3 class="text-2xl font-semibold mb-2">Math & Numerical Methods</h3>
+          Apply Python to calculus, algebra, and modeling real-world systems.
+        </Feature>
+      </div>
+    </div>
+  </section>
+
+  <ContentMedia imgSrc="/assets/camp-schedule.png" reverseImg={true}>
+    <h2 class="text-4xl font-bold mb-4">🧩 Weekly Structure</h2>
+    <p class="text-2xl">
+      Every week has a focused theme and notebook challenge. You’ll build your skills steadily from setup to final projects and reflection.
+    </p>
+    <ul class="text-xl mt-6 list-disc list-inside space-y-1">
+      <li>Week 1: Setup (GitHub, Jupyter, Web Intro)</li>
+      <li>Week 2: Web Design & Deployment</li>
+      <li>Week 3: Python Fundamentals</li>
+      <li>Week 4: GitHub Flow & Python Practice</li>
+      <li>Week 5: Data Science</li>
+      <li>Week 6: Computer Vision</li>
+      <li>Week 7: Math Tools</li>
+      <li>Week 8: Personal Project Week</li>
+      <li>Week 9: Final Reflection</li>
+    </ul>
+  </ContentMedia>
+
+  <ContentMedia imgSrc="/assets/camp-submit.png" reverseImg={false}>
+    <h2 class="text-4xl font-bold mb-4">📦 What You’ll Submit</h2>
+    <p class="text-2xl">
+      Each week:
+      <br />
+      • Fork the main GitHub repo<br />
+      • Complete the assigned Jupyter notebook<br />
+      • Push your work and build your public profile
+    </p>
+    <p class="text-2xl mt-6">
+      Finish all 9 weeks and earn:
+    </p>
+    <ul class="text-xl list-disc list-inside space-y-1 mt-2">
+      <li>🎓 Gifted Center Volunteer Certification</li>
+      <li>🌐 GitHub portfolio with real work</li>
+      <li>🚀 Invitation to join the volunteer team</li>
+    </ul>
+  </ContentMedia>
+
+  <section class="my-64">
+    <div class="container">
+      <h2 class="text-6xl font-bold mb-12">🧭 Who Should Apply?</h2>
+      <ul class="text-2xl list-disc list-inside space-y-3">
+        <li>High school or early university students</li>
+        <li>Motivated self-learners</li>
+        <li>Aspiring developers, scientists, or problem-solvers</li>
+        <li>Those willing to put in real work without being chased</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="my-64">
+    <div class="container">
+      <h2 class="text-6xl font-bold mb-12">✍️ How to Join</h2>
+      <ol class="text-2xl list-decimal list-inside space-y-3">
+        <li>Fork the GitHub Starter Repo</li>
+        <li>Join our Discord (optional)</li>
+        <li>Begin the weekly tasks starting July 1</li>
+      </ol>
+      <p class="text-2xl mt-6">
+        <strong>Deadline to complete all 9 weeks:</strong> September 1, 2025  
+        <br />
+        <em>No late submissions will be accepted.</em>
+      </p>
+    </div>
+  </section>
+
+  <section class="my-64">
+    <div class="container">
+      <h2 class="text-6xl font-bold mb-12 text-center">🔗 Links</h2>
+      <div class="text-center space-y-4 text-2xl">
+        <a href="#" class="text-blue-600 hover:underline">GitHub Starter Repo</a><br />
+        <a href="#" class="text-blue-600 hover:underline">Resource Hub</a><br />
+        <a href="#" class="text-blue-600 hover:underline">Join the Discord</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="my-32 text-white py-16 text-center">
+    <div class="container max-w-2xl">
+      <h2 class="text-4xl font-bold mb-4">Ready to prove yourself?</h2>
+      <pre class="bg-gray-800 rounded p-4 mt-6 text-green-400 overflow-x-auto text-sm">
+<code>> git clone https://github.com/giftedcenter/training-camp-2025</code>
+      </pre>
+    </div>
+  </section>
+</DefaultLayout>

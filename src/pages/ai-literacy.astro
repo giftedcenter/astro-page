@@ -1,0 +1,73 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero-2.astro'
+import Feature from '../components/Feature.astro'
+import Counter from '../components/Counter.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+import { SkipLinks } from 'accessible-astro-components'
+import { Icon } from 'astro-icon/components'
+---
+
+<DefaultLayout title="AI Literacy Program | Gifted Center">
+  <SkipLinks />
+
+  <Hero
+    title="AI Literacy for Everyone"
+    subtitle="A beginner-friendly program that demystifies artificial intelligence—designed for everyone regardless of age, with no coding required."
+    buttonText="Register Now"
+    buttonLink="/contact/"
+    imageSrc="/ai-literacy.png"
+    imageAlt="AI learning illustration"
+  />
+
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl font-bold">What You'll Learn</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+        <Feature icon="mdi:robot" title="">
+          <h3 class="text-2xl font-semibold mb-2">No Coding Required</h3>
+          <p>Understand AI without needing a programming background. Perfect for curious minds of any age.</p>
+        </Feature>
+
+        <Feature icon="mdi:brain" title="">
+          <h3 class="text-2xl font-semibold mb-2">Hands-On Exploration</h3>
+          <p>Interact with real AI tools like ChatGPT, DALL·E, Sora, voice assistants, and more—all in a guided setting.</p>
+        </Feature>
+
+        <Feature icon="mdi:chat-question-outline" title="">
+          <h3 class="text-2xl font-semibold mb-2">Prompting Skills</h3>
+          <p>Learn how to talk to AI effectively—what to ask, how to refine prompts, and how to use AI ethically and creatively.</p>
+        </Feature>
+
+        <Feature icon="mdi:scale-balance" title="">
+          <h3 class="text-2xl font-semibold mb-2">Ethics & Impact</h3>
+          <p>Explore important questions around AI ethics, bias, and how AI shapes our future.</p>
+        </Feature>
+      </div>
+    </div>
+  </section>
+
+  <ContentMedia imgSrc="/assets/ai-industry.png" reverseImg={true}>
+    <h2 class="text-4xl font-bold mb-4">Why Learn AI Now?</h2>
+    <p class="text-2xl">
+      AI is transforming every field—from art and education to medicine and business. Understanding how AI works helps you stay informed, safe, and empowered in a tech-driven world.
+    </p>
+  </ContentMedia>
+
+  <ContentMedia imgSrc="/assets/ai-format.png" reverseImg={false}>
+    <h2 class="text-4xl font-bold mb-4">Course Format</h2>
+    <p class="text-2xl">
+      This course is a 1-on-1 experience with a trained data scientist. It includes fun challenges using real AI tools. It's built for learners of all backgrounds—curious students, parents, and educators alike.
+    </p>
+  </ContentMedia>
+
+  <section class="my-32">
+    <div class="container">
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3 text-center">
+        <Counter count="0" title="Lines of Code" sub="needed" />
+        <Counter count="100+" title="AI Use Cases" sub="explored" />
+        <Counter count="100%" title="Satisfaction" sub="rate" />
+      </div>
+    </div>
+  </section>
+</DefaultLayout>
