@@ -1,0 +1,84 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero-2.astro'
+import Feature from '../components/Feature.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+import { SkipLinks } from 'accessible-astro-components'
+---
+
+<DefaultLayout title="Career Prep Program | Gifted Center">
+  <SkipLinks />
+
+  <Hero
+    title="Career & University Prep"
+    subtitle="From choosing the right program to landing your first job — we’ve got you covered."
+    buttonText="Get Started"
+    buttonLink="/contact/"
+    imageSrc="/assets/career-prep-hero.png"
+    imageAlt="Career and university prep illustration"
+    subtext="Become a confident, informed, and successful student."
+  />
+
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl font-bold">🎓 University Preparation</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+        <Feature icon="mdi:school-outline" title="">
+          <h3 class="text-2xl font-semibold mb-2">Choosing the Right Program</h3>
+          <p>Match your interests to programs and understand the long-term outcomes of each field.</p>
+        </Feature>
+        <Feature icon="mdi:map-marker-path" title="">
+          <h3 class="text-2xl font-semibold mb-2">Picking the Right University</h3>
+          <p>Evaluate schools by location, tuition, campus culture, opportunities, and more.</p>
+        </Feature>
+        <Feature icon="mdi:calendar-account" title="">
+          <h3 class="text-2xl font-semibold mb-2">First-Year Survival Guide</h3>
+          <p>Know what to expect in terms of workload, lectures, and lifestyle changes.</p>
+        </Feature>
+        <Feature icon="mdi:account-child-circle" title="">
+          <h3 class="text-2xl font-semibold mb-2">Parent Support & Involvement</h3>
+          <p>Resources and advice for parents to help their child transition confidently to post-secondary life.</p>
+        </Feature>
+        <Feature icon="mdi:cash-check" title="">
+          <h3 class="text-2xl font-semibold mb-2">Financial Planning</h3>
+          <p>We guide families through budgeting, scholarships, OSAP, and managing school expenses wisely.</p>
+        </Feature>
+      </div>
+    </div>
+  </section>
+
+  <ContentMedia imgSrc="/assets/career-uni-overview.png" reverseImg={true}>
+    <h2 class="text-4xl font-bold mb-4">📍 Personalized University Roadmap</h2>
+    <p class="text-2xl">
+      Every student is different. We help you navigate programs, applications, and transitions with practical, personalized advice — including optional parent sessions.
+    </p>
+  </ContentMedia>
+
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl font-bold">💼 Job Preparation</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+        <Feature icon="mdi:file-document-edit-outline" title="">
+          <h3 class="text-2xl font-semibold mb-2">Resume & Cover Letter</h3>
+          <p>Build documents that are clean, compelling, and tailored to your field.</p>
+        </Feature>
+        <Feature icon="mdi:briefcase-account" title="">
+          <h3 class="text-2xl font-semibold mb-2">Portfolio Building</h3>
+          <p>Showcase your work with GitHub, Notion, Google Sites, or a custom site.</p>
+        </Feature>
+        <Feature icon="mdi:magnify" title="">
+          <h3 class="text-2xl font-semibold mb-2">Job Search Strategies</h3>
+          <p>Use modern tools and methods to find jobs and internships — even the hidden ones.</p>
+        </Feature>
+      </div>
+    </div>
+  </section>
+
+  <ContentMedia imgSrc="/assets/career-job-format.png" reverseImg={false}>
+    <h2 class="text-4xl font-bold mb-4">🛠️ Real-World Job Skills</h2>
+    <p class="text-2xl">
+      You’ll get guidance from tutors who’ve been through it — career advisors, industry professionals, and university students who know how to make applications stand out.
+    </p>
+  </ContentMedia>
+
+</DefaultLayout>

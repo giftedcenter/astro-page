@@ -1,0 +1,111 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero-2.astro'
+import Feature from '../components/Feature.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+import { SkipLinks } from 'accessible-astro-components'
+---
+
+<DefaultLayout title="Volunteer Program | Gifted Center">
+  <SkipLinks />
+
+  <Hero
+    title="Gifted Center Volunteer Program"
+    subtitle="Make an impact. Learn. Inspire. Earn service hours doing meaningful work."
+    buttonText="Apply Now"
+    buttonLink="/contact"
+    imageSrc="/assets/volunteer-hero.png"
+    imageAlt="Student volunteers collaborating"
+  />
+
+  <section class="my-64">
+    <div class="container">
+      <h2 class="text-6xl font-bold mb-16">🎓 Academic Support</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-3">
+        <Feature icon="mdi:account-group-outline" title="">
+          <h3 class="text-2xl font-semibold mb-2">Peer Study Group Leader</h3>
+          <p>Lead small study groups and support younger students with collaborative learning.</p>
+        </Feature>
+        <Feature icon="mdi:flash-circle" title="">
+          <h3 class="text-2xl font-semibold mb-2">Learning Resource Creator</h3>
+          <p>Make flashcards, notes, and cheatsheets to support learning. Format for our hub or social content.</p>
+        </Feature>
+        <Feature icon="mdi:book-open-variant" title="">
+          <h3 class="text-2xl font-semibold mb-2">Homework Club Helper</h3>
+          <p>Join drop-in homework help sessions to guide and support fellow students.</p>
+        </Feature>
+      </div>
+    </div>
+  </section>
+
+  <section class="my-64">
+    <div class="container">
+      <h2 class="text-6xl font-bold mb-16">💡 Education Advocacy Media</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-3">
+        <Feature icon="mdi:video-outline" title="">
+          <h3 class="text-2xl font-semibold mb-2">Educational Content Creator</h3>
+          <p>Make short videos on study tips or subject tricks. Example: “Cool Math Tricks” or “How to Stay Focused”.</p>
+        </Feature>
+        <Feature icon="mdi:image-outline" title="">
+          <h3 class="text-2xl font-semibold mb-2">Poster / Infographic Designer</h3>
+          <p>Create visuals on various topics like study habits, Python, or AI in schools.</p>
+        </Feature>
+        <Feature icon="mdi:pen" title="">
+          <h3 class="text-2xl font-semibold mb-2">Blog Writer / Youth Columnist</h3>
+          <p>Write short explainers or personal reflections like “How I Beat Test Anxiety”.</p>
+        </Feature>
+      </div>
+    </div>
+  </section>
+
+  <section class="my-64">
+    <div class="container">
+      <h2 class="text-6xl font-bold mb-16">💬 Community & Outreach</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-3">
+        <Feature icon="mdi:earth" title="">
+          <h3 class="text-2xl font-semibold mb-2">Education Ambassador</h3>
+          <p>Promote Gifted Center’s programs in your school or local communities. Share links and flyers.</p>
+        </Feature>
+        <Feature icon="mdi:bullhorn-outline" title="">
+          <h3 class="text-2xl font-semibold mb-2">Event Support Volunteer</h3>
+          <p>Help run coding challenges, virtual workshops, and info nights as a moderator or assistant.</p>
+        </Feature>
+        <Feature icon="mdi:magnify" title="">
+          <h3 class="text-2xl font-semibold mb-2">Curriculum Researcher</h3>
+          <p>Find Olympiad problems, AI topics, or cool math puzzles to expand our content library.</p>
+        </Feature>
+      </div>
+    </div>
+  </section>
+
+  <section class="my-64">
+    <div class="container">
+      <h2 class="text-6xl font-bold mb-16">🛠️ Technical & Creative Roles</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+        <Feature icon="mdi:open-source-initiative" title="">
+          <h3 class="text-2xl font-semibold mb-2">Open Source Tool Reviewer</h3>
+          <p>Test learning platforms like Anki or Replit and write a short review/tutorial for other students.</p>
+        </Feature>
+        <Feature icon="mdi:code-tags-check" title="">
+          <h3 class="text-2xl font-semibold mb-2">Coding Challenge Tester</h3>
+          <p>Try out Python challenges and help improve clarity and difficulty for future learners.</p>
+        </Feature>
+      </div>
+    </div>
+  </section>
+
+  <section class="my-64 bg-gray-50 dark:bg-slate-800 py-20">
+    <div class="container max-w-4xl">
+      <h2 class="text-6xl font-bold mb-8">🏅 Recognition & Hours</h2>
+      <p class="text-2xl mb-6">
+        All hours are tracked and verified by Gifted Center.
+      </p>
+      <ul class="text-2xl list-disc list-inside space-y-2">
+        <li>You’ll receive an official <strong>Volunteer Certificate</strong></li>
+        <li>Eligible to request a <strong>Reference Letter</strong></li>
+        <li>Standout contributions may be featured on our site or social media</li>
+      </ul>
+    </div>
+  </section>
+
+</DefaultLayout>

@@ -4,10 +4,11 @@ import { Icon } from 'astro-icon/components'
 const {
   title = 'AI Literacy for Everyone',
   subtitle = 'Ages 12+. No coding required.',
+  subtext = 'Learn how AI works and how it\'s shaping the world — all without writing a single line of code.',
   imageSrc = '/ai-literacy.png',
   imageAlt = 'AI Literacy Illustration',
   buttonText = 'Register Now',
-  buttonLink = '/register',
+  buttonLink = '/contact',
 } = Astro.props
 ---
 
@@ -20,20 +21,20 @@ const {
         </h1>
         <p class="text-lg text-center md:text-left text-gray-300 max-w-prose">
           {subtitle}<br/>
-          Learn how AI works and how it's shaping the world — all without writing a single line of code.
+          {subtext}
         </p>
         <div class="flex flex-col gap-3 min-[500px]:flex-row mt-4">
           <a class="button has-icon" href={buttonLink}>
             <Icon name="ion:sparkles-outline" />
             {buttonText}
           </a>
-          <a class="button has-icon color-secondary" href="/contact">
+          <a class="button has-icon color-secondary" href="/contact/">
             <Icon name="ion:chatbubble-ellipses-outline" />
             Ask a Question
           </a>
         </div>
       </div>
-      <img class="hidden lg:block rounded-xl shadow-xl" src={imageSrc} alt={imageAlt} decoding="async" />
+      <a  href={buttonLink}><img class="hidden lg:block rounded-xl shadow-xl" src={imageSrc} alt={imageAlt} decoding="async" /> </a>
     </div>
   </div>
 </section>

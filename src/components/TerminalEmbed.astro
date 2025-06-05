@@ -1,0 +1,155 @@
+---
+// TerminalEmbed.astro
+---
+<style>
+  #console-log::-webkit-scrollbar {
+  display: none;
+}
+#console-log {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+</style>
+<div class="terminal-container font-mono text-sm p-4 rounded-lg border border-gray-700 bg-[#0d1117] text-[#c9d1d9] shadow-xl max-w-full overflow-hidden">
+
+  <div class="mb-2 text-green-400">ai@giftedcenter.org:~$ Welcome to the AI Literacy Terminal</div>
+
+  <div id="console-log" class="h-64 overflow-y-auto space-y-1 mb-2 pr-2 scroll-smooth break-words whitespace-pre-wrap">
+
+    <!-- Chat history appears here -->
+  </div>
+
+  <form id="console-form" class="flex gap-2 items-center">
+    <span class="text-green-400">ai@giftedcenter.org</span>:~$
+    <input
+      type="text"
+      id="console-input"
+      autocomplete="off"
+       class="flex-1 bg-transparent border-none outline-none focus:ring-0 focus:outline-none text-[#c9d1d9] placeholder-gray-500"
+      placeholder="type 'new chat' to reset the chat"
+    />
+  </form>
+</div>
+<script is:global>
+  if (typeof window !== 'undefined') {
+    const STORAGE_KEY = "aiLitHistory";
+    const TIMESTAMP_KEY = "aiLitTimestamp";
+    const ONE_DAY = 86400000;
+
+    function loadHistory() {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      return stored ? JSON.parse(stored) : [];
+    }
+
+    function saveToHistory(role, text) {
+      const history = loadHistory();
+      history.push({ role, text });
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(history));
+      localStorage.setItem(TIMESTAMP_KEY, Date.now().toString());
+    }
+
+    function shouldClearHistory() {
+      const last = parseInt(localStorage.getItem(TIMESTAMP_KEY) || "0");
+      return (Date.now() - last) > ONE_DAY;
+    }
+
+    function clearHistory() {
+      localStorage.removeItem(STORAGE_KEY);
+      localStorage.removeItem(TIMESTAMP_KEY);
+    }
+
+    
+    function renderHistory(log) {
+      const history = loadHistory();
+      if (history.length === 0) {
+        const help = document.createElement("div");
+        help.innerHTML = `<span class="text-purple-400">sys</span>: Type <code class="text-yellow-400">'new chat'</code> to reset the conversation.`;
+        log.appendChild(help);
+      }
+      for (const entry of history) {
+        const div = document.createElement("div");
+        const label = entry.role === "user"
+          ? '<span class="text-green-400">ai@giftedcenter.org</span>:~$ '
+          : '<span class="text-purple-400">sys</span>: ';
+        div.innerHTML = label + entry.text;
+        log.appendChild(div);
+      }
+      log.scrollTop = log.scrollHeight;
+    }
+
+    const log = document.getElementById('console-log');
+    const input = document.getElementById('console-input');
+    const form = document.getElementById('console-form');
+
+    if (shouldClearHistory()) clearHistory();
+    renderHistory(log);
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const query = input.value.trim();
+      if (!query) return;
+
+      if (query.toLowerCase() === "new chat") {
+        clearHistory();
+        log.innerHTML = "";
+        const reset = document.createElement("div");
+        reset.innerHTML = ``;
+        log.appendChild(reset);
+        saveToHistory("sys", "Chat reset. New session started.");
+        input.value = '';
+        return;
+      }
+
+      const userLine = document.createElement("div");
+      userLine.innerHTML = `<span class="text-green-400">ai@giftedcenter.org</span>:~$ ${query}`;
+      log.appendChild(userLine);
+      saveToHistory("user", query);
+      input.value = '';
+      log.scrollTop = log.scrollHeight;
+
+      const history = loadHistory().filter(h => h.role === "user" || h.role === "sys");
+      const messages = history.map(h => ({
+        role: h.role === "user" ? "user" : "assistant",
+        content: h.text
+      }));
+      messages.push({ role: "user", content: query });
+
+      try {
+        const res = await fetch("/.netlify/functions/llm-router", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ messages })
+        });
+
+        const data = await res.json();
+        const output = data.text ?? "[no response]";
+        const sysLine = document.createElement("div");
+        sysLine.innerHTML = `<span class="text-purple-400">sys</span>: ${highlightKeywords(output)}`;
+        log.appendChild(sysLine);
+        saveToHistory("sys", output);
+        log.scrollTop = log.scrollHeight;
+      } catch (err) {
+        const errLine = document.createElement("div");
+        errLine.innerHTML = `<span class="text-purple-400">sys</span>: Error: ${err.message}`;
+        log.appendChild(errLine);
+        saveToHistory("sys", `Error: ${err.message}`);
+        log.scrollTop = log.scrollHeight;
+      }
+    });
+  }
+  function highlightKeywords(text) {
+  const keywords = [
+    "AI", "artificial intelligence", "Gifted Center", "tutoring", "volunteer",
+    "mentor", "student", "learn", "study", "machine learning",
+    "Python", "code", "program", "education", "university"
+  ];
+
+  for (const word of keywords) {
+    const regex = new RegExp(`\\b(${word})\\b`, "gi");
+    text = text.replace(regex, `<span class="text-yellow-400 font-semibold">$1</span>`);
+  }
+  return text;
+}
+
+
+</script>

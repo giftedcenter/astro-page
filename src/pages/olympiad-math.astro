@@ -1,0 +1,90 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero-2.astro'
+import Feature from '../components/Feature.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+import Counter from '../components/Counter.astro'
+import { SkipLinks } from 'accessible-astro-components'
+---
+
+<DefaultLayout title="Olympiad Math Training | Gifted Center">
+  <SkipLinks />
+
+  <Hero
+    title="Olympiad Math Training Camp"
+    subtitle="Push beyond the curriculum. Solve like a mathematician."
+    buttonText="Apply Now"
+    buttonLink="/contact/"
+    imageSrc="/assets/olympiad-hero.png"
+    imageAlt="Olympiad math camp illustration"
+  />
+
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl font-bold">🎯 Who is This For?</h2>
+      <p class="text-2xl leading-relaxed">
+        This is a rigorous math enrichment program for students who want to tackle advanced math challenges and prepare for contests like:
+      </p>
+      <ul class="list-disc text-2xl list-inside mt-6 space-y-1">
+        <li>Canadian Open Mathematics Challenge (COMC)</li>
+        <li>AMC 10/12 and AIME</li>
+        <li>Euclid, Fermat, and Canadian Math Olympiad</li>
+        <li>CSMC, CIMC, Pascal, Cayley, and more</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl font-bold">📚 What You'll Learn</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-2">
+        <Feature icon="mdi:lightbulb-outline" title="">
+          <h3 class="text-2xl font-semibold mb-2">Creative Problem Solving</h3>
+          Learn to think outside the box and attack problems with elegance and insight.
+        </Feature>
+
+        <Feature icon="mdi:calculator-variant" title="">
+          <h3 class="text-2xl font-semibold mb-2">Core Olympiad Topics</h3>
+          Master number theory, combinatorics, inequalities, functional equations, and more.
+        </Feature>
+
+        <Feature icon="mdi:chess-rook" title="">
+          <h3 class="text-2xl font-semibold mb-2">Strategic Training</h3>
+          Understand how to break down problems, organize scratch work, and prove results rigorously.
+        </Feature>
+
+        <Feature icon="mdi:chart-line" title="">
+          <h3 class="text-2xl font-semibold mb-2">Contest Readiness</h3>
+          Work with timed challenges, past papers, and simulated Olympiad rounds.
+        </Feature>
+      </div>
+    </div>
+  </section>
+
+  <ContentMedia imgSrc="/assets/olympiad-content.png" reverseImg={true}>
+    <h2 class="text-4xl font-bold mb-4">🧠 Learn Beyond the School System</h2>
+    <p class="text-2xl">
+      Most school math doesn't prepare you for the kind of creative, deep thinking Olympiads demand. This program builds the mathematical maturity and confidence needed to excel in competition and beyond.
+    </p>
+  </ContentMedia>
+
+  <ContentMedia imgSrc="/assets/olympiad-format.png" reverseImg={false}>
+    <h2 class="text-4xl font-bold mb-4">📦 Program Format</h2>
+    <p class="text-2xl">
+      Our program includes weekly problem sets, live strategy sessions, solution write-ups, and instructor feedback. All materials are designed by experienced contest coaches and former competitors.
+    </p>
+  </ContentMedia>
+
+  <section class="my-64">
+    <div class="container">
+      <h2 class="text-6xl font-bold mb-12 text-center">🏆 Track Your Progress</h2>
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3 text-center">
+        <Counter count="6+" title="Olympiads" sub="targeted" />
+        <Counter count="20+" title="Weekly Problems" sub="solved" />
+        <Counter count="100%" title="Math Enthusiasm" sub="required" />
+      </div>
+    </div>
+  </section>
+
+
+</DefaultLayout>

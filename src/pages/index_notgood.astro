@@ -1,0 +1,94 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero.astro'
+import Feature from '../components/Feature.astro'
+import Counter from '../components/Counter.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+import { Tabs, TabsList, TabsPanel, TabsTab, TabItem } from 'accessible-astro-components'
+
+
+
+const monthsPassed = new Date().getFullYear() * 12 + new Date().getMonth() - (2024 * 12 + 8);
+
+---
+<DefaultLayout title="Tutoring" description="The Gifted Tutoring Center">
+  
+  <Hero />
+  <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+    <Tabs>
+      <TabsList>
+        <TabsTab id="Primary School" controls="panel1" selected>Primary School</TabsTab>
+        <TabsTab id="Highschool" controls="panel2" selected>Highschool</TabsTab>
+        <TabsTab id="College" controls="panel3">College</TabsTab>
+        <TabsTab id="University" controls="panel4">University</TabsTab>
+      </TabsList>
+  
+      <TabsPanel id="panel1" labelledby="tab1" selected>
+        <div style="display: flex; flex-direction: column; align-items: center; max-width: 600px; margin: 0 auto;">
+          <h2>Primary School</h2>
+          <p>Unlock your child’s early potential with tailored lessons designed to challenge and engage young gifted minds. Our primary tutors focus on building strong foundations while fostering creativity and intellectual curiosity.</p>
+        </div>
+      </TabsPanel>
+  
+      <TabsPanel id="panel2" labelledby="tab2" selected>
+        <div style="display: flex; flex-direction: column; align-items: center; max-width: 600px; margin: 0 auto;">
+          <h2>Highschool</h2>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Zym7nMDKoW8?si=_KoGYP-DLugqtEzZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <p>Unlock your child’s full potential with advanced instruction tailored to both junior and senior secondary students. For junior learners, we focus on critical thinking, academic growth, and preparation for the challenges ahead. Senior students receive expert pre-university guidance, including exam preparation, competitive applications, and readiness for higher education.</p>
+        </div>
+      </TabsPanel>
+  
+      <TabsPanel id="panel3" labelledby="tab3">
+        <div style="display: flex; flex-direction: column; align-items: center; max-width: 600px; margin: 0 auto;">
+          <h2>College</h2>
+          <p>Our tutoring services support college students in vocational and technical programs. With a focus on applied sciences, business, technology, and trades to help students develop both practical and theoretical skills for the workforce or further studies.</p>
+        </div>
+      </TabsPanel>
+  
+      <TabsPanel id="panel4" labelledby="tab4">
+        <div style="display: flex; flex-direction: column; align-items: center; max-width: 600px; margin: 0 auto;">
+          <h2>University</h2>
+          <p>Our university tutoring is heavily specialized, offering 1-on-1 instruction tailored to specific courses and fields of study. Work directly with experts who provide in-depth guidance, ensuring you excel in your academic journey and achieve your goals.</p>
+        </div>
+      </TabsPanel>
+    </Tabs> 
+  </div>
+  
+
+  <section class="mb-32 mt-64">
+    <div class="container">
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4 text-center">
+        <div class="social-item">
+          <a href="https://facebook.com/giftedtutoring" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook fa-3x"></i>
+            <p class="text-4xl font-semibold">Facebook</p>
+          </a>
+        </div>
+        
+        <div class="social-item">
+          <a href="https://twitter.com/giftedtutoring" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter fa-3x"></i>
+            <p class="text-4xl font-semibold">Twitter</p>
+          </a>
+        </div>
+        
+        <div class="social-item">
+          <a href="https://instagram.com/giftedtutor" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram fa-3x"></i>
+            <p class="text-4xl font-semibold">Instagram</p>
+          </a>
+        </div>
+        
+        <div class="social-item">
+          <a href="https://tiktok.com/@giftedtutoringcenter" target="_blank" aria-label="Tiktok">
+            <i class="fab fa-tiktok fa-3x"></i>
+            <p class="text-4xl font-semibold">Tiktok</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <h1 id="contact"> </h1>
+</DefaultLayout>
+
