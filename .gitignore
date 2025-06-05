@@ -28,3 +28,5 @@ package-lock.json
 
 # Local Netlify folder
 .netlify
+
+index_dontpush.astro
